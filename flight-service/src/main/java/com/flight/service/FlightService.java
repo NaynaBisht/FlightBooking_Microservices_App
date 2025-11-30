@@ -1,10 +1,12 @@
 package com.flight.service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Service;
 
 import com.flight.entity.Flight;
+import com.flight.exception.BadRequestException;
 import com.flight.repository.FlightRepository;
 import com.flight.request.FlightSearchRequest;
 import com.flight.response.FlightSearchResponse;
@@ -21,9 +23,24 @@ import reactor.core.publisher.Mono;
 public class FlightService {
 
 	private final FlightRepository flightRepository;
+	
+	public Mono<Flight> getFlightByNumber(String flightNumber) {
+        return flightRepository.findByFlightNumber(flightNumber);
+    }
 
 	public Mono<FlightSearchResponse> searchFlights(FlightSearchRequest request) {
 
+		if (request.getDepartingAirport().equals(request.getArrivalAirport())) {
+			throw new BadRequestException("Departing and arrival airports cannot be the same");
+		}
+
+		if (request.getDepartDate().isBefore(LocalDate.now())) {
+			throw new BadRequestException("Departure date cannot be in the past");
+		}
+		
+		if (request.getPassengers().getTotalPassengers() < 1) {
+			throw new BadRequestException("At least one passenger must be selected");
+		}
 		LocalDateTime startOfDay = request.getDepartDate().atStartOfDay();
 		LocalDateTime endOfDay = request.getDepartDate().atTime(23, 59, 59);
 
