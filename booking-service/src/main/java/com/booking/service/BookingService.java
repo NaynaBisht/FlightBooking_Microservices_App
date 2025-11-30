@@ -5,10 +5,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.booking.client.FlightClient;
 import com.booking.entity.Booking;
-import com.flight.entity.Flight;
 import com.booking.entity.Passenger;
 import com.booking.enums.Gender;
 import com.booking.enums.MealPreference;
@@ -17,7 +18,6 @@ import com.booking.exception.PassengerValidationException;
 import com.booking.exception.ResourceNotFoundException;
 import com.booking.exception.SeatUnavailableException;
 import com.booking.repository.BookingRepository;
-import com.flight.repository.FlightRepository;
 import com.booking.request.BookingRequest;
 import com.booking.request.PassengerRequest;
 import com.booking.response.BookingResponse;
@@ -32,13 +32,14 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 public class BookingService {
 
+	@Autowired
+	private FlightClient flightClient;
 	private final BookingRepository bookingRepository;
-	private final FlightRepository flightRepository;
 	private final PnrGeneratorService pnrGeneratorService;
 
 	public Mono<BookingResponse> bookFlight(String flightNumber, BookingRequest request) {
 
-		return flightRepository.findByFlightNumber(flightNumber)
+		return flightClient.findByFlightNumber(flightNumber)
 				.switchIfEmpty(
 						Mono.error(new ResourceNotFoundException("Flight not found for number: " + flightNumber)))
 				.flatMap(flight -> {
@@ -73,14 +74,7 @@ public class BookingService {
 					flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
 
 					return bookingRepository.save(booking)
-							.flatMap(savedBooking -> flightRepository.save(flight).thenReturn(savedBooking))
-							.map(savedBooking -> {
-								BookingResponse response = new BookingResponse();
-								response.setPnr(savedBooking.getPnr());
-								response.setTotalPrice(savedBooking.getTotalPrice());
-								response.setMessage("You have successfully booked the flight");
-								return response;
-							});
+							.map(saved -> new BookingResponse(saved.getPnr(), price, "Booking successful"));
 				});
 	}
 
