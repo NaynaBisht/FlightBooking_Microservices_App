@@ -11,4 +11,7 @@ public class BookingResponse {
 	private String pnr;
 	private float totalPrice;
 	private String message;
+	private String emailId;     
+    private String passengerName; 
+    private String flightNumber;
 }

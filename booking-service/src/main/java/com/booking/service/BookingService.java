@@ -1,14 +1,17 @@
 package com.booking.service;
 
 import java.time.LocalDateTime;
-
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.booking.client.FlightClient;
+import com.booking.config.RabbitMQConfig;
 import com.booking.entity.Booking;
 import com.booking.entity.Passenger;
 import com.booking.enums.Gender;
@@ -36,6 +39,9 @@ public class BookingService {
 	private FlightClient flightClient;
 	private final BookingRepository bookingRepository;
 	private final PnrGeneratorService pnrGeneratorService;
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
 
 	public Mono<BookingResponse> bookFlight(String flightNumber, BookingRequest request) {
 
@@ -73,8 +79,29 @@ public class BookingService {
 
 					flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
 
-					return bookingRepository.save(booking)
-							.map(saved -> new BookingResponse(saved.getPnr(), price, "Booking successful"));
+					return bookingRepository.save(booking).doOnSuccess(savedBooking -> {
+						try {
+							Map<String, Object> emailMessage = new HashMap<>();
+							emailMessage.put("pnr", savedBooking.getPnr());
+							emailMessage.put("emailId", savedBooking.getEmailId());
+							emailMessage.put("flightNumber", savedBooking.getFlightNumber());
+							emailMessage.put("totalPrice", savedBooking.getTotalPrice());
+
+							String name = "Valued Customer";
+							if (savedBooking.getPassengers() != null && !savedBooking.getPassengers().isEmpty()) {
+								name = savedBooking.getPassengers().get(0).getPassengerName();
+							}
+							emailMessage.put("passengerName", name);
+
+							rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, RabbitMQConfig.ROUTING_KEY,
+									emailMessage);
+							log.info("Message sent to Queue for PNR: {}", savedBooking.getPnr());
+
+						} catch (Exception e) {
+							log.error("Failed to send RabbitMQ message", e);
+						}
+					}).map(saved -> new BookingResponse(saved.getPnr(), saved.getTotalPrice(), "Booking successful",
+							saved.getEmailId(), saved.getPassengers().get(0).getPassengerName(), flightNumber));
 				});
 	}
 

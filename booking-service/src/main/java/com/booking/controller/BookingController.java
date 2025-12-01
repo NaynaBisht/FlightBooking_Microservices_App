@@ -64,11 +64,11 @@ public class BookingController {
 
 					if (message.contains("Flight not found")) {
 						return Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND)
-								.body(new BookingResponse(null, 0, message)));
+								.body(new BookingResponse(null, 0, message, request.getEmailId(), request.getPassengers().get(0).getPassengerName(), flightNumber )));
 					}
 
 					return Mono.just(
-							ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new BookingResponse(null, 0, message)));
+							ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new BookingResponse(null, 0, message, request.getEmailId(), request.getPassengers().get(0).getPassengerName(), flightNumber)));
 				});
 
 	}
