@@ -1,0 +1,6 @@
+com\common\dto\BadRequestException.class
+com\common\dto\GlobalExceptionHandler.class
+com\common\dto\InvalidFlightTimeException.class
+com\common\dto\ResourceNotFoundException.class
+com\common\dto\SeatUnavailableException.class
+com\common\dto\PassengerValidationException.class

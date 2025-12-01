@@ -1,4 +1,4 @@
-package com.flight.exception;
+package com.common.dto;
 
 public class InvalidFlightTimeException extends RuntimeException {
 	public InvalidFlightTimeException(String message) {

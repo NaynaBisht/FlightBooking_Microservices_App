@@ -1,6 +1,7 @@
 package com.booking.service;
 
 import java.time.LocalDateTime;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +17,14 @@ import com.booking.entity.Booking;
 import com.booking.entity.Passenger;
 import com.booking.enums.Gender;
 import com.booking.enums.MealPreference;
-import com.booking.exception.BadRequestException;
-import com.booking.exception.PassengerValidationException;
-import com.booking.exception.ResourceNotFoundException;
-import com.booking.exception.SeatUnavailableException;
 import com.booking.repository.BookingRepository;
 import com.booking.request.BookingRequest;
 import com.booking.request.PassengerRequest;
 import com.booking.response.BookingResponse;
+import com.common.dto.BadRequestException;
+import com.common.dto.PassengerValidationException;
+import com.common.dto.ResourceNotFoundException;
+import com.common.dto.SeatUnavailableException;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

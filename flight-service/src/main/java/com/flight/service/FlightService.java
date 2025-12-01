@@ -1,12 +1,13 @@
 package com.flight.service;
 
 import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Service;
 
+import com.common.dto.BadRequestException;
 import com.flight.entity.Flight;
-import com.flight.exception.BadRequestException;
 import com.flight.repository.FlightRepository;
 import com.flight.request.FlightSearchRequest;
 import com.flight.response.FlightSearchResponse;

@@ -1,4 +1,4 @@
-package com.booking.exception;
+package com.common.dto;
 
 public class BadRequestException extends RuntimeException {
 	public BadRequestException(String message) {

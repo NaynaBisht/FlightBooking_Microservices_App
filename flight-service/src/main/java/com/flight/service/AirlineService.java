@@ -2,13 +2,13 @@ package com.flight.service;
 
 import java.time.LocalDateTime;
 
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.common.dto.InvalidFlightTimeException;
 import com.flight.entity.Flight;
-import com.flight.exception.BadRequestException;
-import com.flight.exception.InvalidFlightTimeException;
 import com.flight.repository.FlightRepository;
 import com.flight.request.AddFlightRequest;
 

@@ -1,4 +1,4 @@
-package com.booking.exception;
+package com.common.dto;
 
 public class ResourceNotFoundException extends RuntimeException {
 	public ResourceNotFoundException(String message) {
