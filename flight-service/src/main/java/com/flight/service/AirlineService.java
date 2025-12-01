@@ -2,9 +2,7 @@ package com.flight.service;
 
 import java.time.LocalDateTime;
 
-
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.common.dto.InvalidFlightTimeException;
@@ -12,15 +10,16 @@ import com.flight.entity.Flight;
 import com.flight.repository.FlightRepository;
 import com.flight.request.AddFlightRequest;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class AirlineService {
 
-	@Autowired
-	private FlightRepository flightRepository;
+	private final FlightRepository flightRepository;
 
 	public Mono<Flight> addFlight(AddFlightRequest request) {
 

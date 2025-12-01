@@ -1,6 +1,7 @@
 package com.booking.client;
 
 import org.springframework.stereotype.Component;
+
 import org.springframework.web.reactive.function.client.WebClient;
 import com.booking.dto.FlightDTO;
 import reactor.core.publisher.Mono;

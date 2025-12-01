@@ -1,17 +1,0 @@
-
-acom.apiGateway.controller.FallbackController#flightServiceFallback()Lreactor/core/publisher/Mono;x
-nD:/FlightBooking_Microservices_App/api-gateway/src/main/java/com/apiGateway/controller/FallbackController.java (*"1*ã
-1	 (¢
-Ÿ
-	 (V!
-%0reactor.core.publisher.Mono"Qreactor.core.publisher.Mono#just(Ljava/lang/Object;)Lreactor/core/publisher/Mono;*;
-
-__unknown_file ("
-reactor.core.publisher.Mono*`
-
-__unknown_file (DB
-@Flight Service is currently unavailable. Please try again later."/
- (W#
-!
-%0reactor.core.publisher.MonoB0.
-,com.apiGateway.controller.FallbackControllerH

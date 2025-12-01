@@ -1,201 +1,0 @@
-
-1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764616996439*java2.Bê
-L
-Gnotification-service/src/main/java/com/notification/dto/BookingDTO.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-notification-service6
-
-package8
-.
-)notification-service:com.notification.dto9
-%
-com.notification.dto.BookingDTO11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-
-BookingDTO16
-
-lombok.Data18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.NoArgsConstructor23
-
-lombok.AllArgsConstructor25
-)
-#com.notification.dto.BookingDTO.pnr27
-
-field28
-
-private29
-	
-pnr30
-0
-*com.notification.dto.BookingDTO.totalPrice32
-
-
-totalPrice33
--
-'com.notification.dto.BookingDTO.message35
-
-message36
--
-'com.notification.dto.BookingDTO.emailId38
-
-emailId39
-3
--com.notification.dto.BookingDTO.passengerName41
-
-passengerName42
-2
-,com.notification.dto.BookingDTO.flightNumber44
-
-flightNumber45J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6j”
-B
-31<
-313228 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-33
->
-108
-101112 *
-1
- 
-(:7B
-
-
-13
-14
-
-
-15
-16
-
-17
-171819
-B
-37<
-373828 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-39
-
-24
-242519
-B
-40<
-404128 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-42
-B
-26<
-262728 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-30
-B
-34<
-343528 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-36
-
-22
-222319
-B
-43<
-434428 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-45r¢
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1	 	(
-
-102421*
-1	 	(

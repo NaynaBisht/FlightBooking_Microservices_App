@@ -1,78 +1,0 @@
-
-1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764616995255*java2.B°
-M
-Hcommon-module/src/main/java/com/common/dto/SeatUnavailableException.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-common-module6
-
-package8
-!
-common-module:com.common.dto9
--
-'com.common.dto.SeatUnavailableException11
-
-	exception12
-
-access13
-
-public14
-
-simple-name15
-
-SeatUnavailableException16
-I
-Ccom.common.dto.SeatUnavailableException#<init>(Ljava/lang/String;)V18
-
-method19
-
-calls20J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6j„
->
-108
-101112 *
-1 (&:7B
-
-
-13
-14
-
-
-15
-16
-B
-17<
-171819 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-16r
-
-171020*
-1	 (!

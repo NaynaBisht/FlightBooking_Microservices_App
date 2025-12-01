@@ -1,7 +1,0 @@
-organization=naynabisht
-projectKey=NaynaBisht_FlightBooking_Microservices_App
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.76948
-dashboardUrl=https://sonarcloud.io/dashboard?id=NaynaBisht_FlightBooking_Microservices_App
-ceTaskId=AZrbXvegiWhUjqCd9o-6
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZrbXvegiWhUjqCd9o-6

@@ -1,156 +1,0 @@
-
-1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764617000727*java2.B©
-F
-Abooking-service/src/main/java/com/booking/dto/PassengerCount.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-booking-service6
-
-package8
-$
-booking-service:com.booking.dto9
-$
-com.booking.dto.PassengerCount11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-PassengerCount16
-
-lombok.Data18
-
-unknown19
-
-annotated by20
-
-
-uses21
-+
-%com.booking.dto.PassengerCount.adults23
-
-field24
-
-private25
-
-adults26
-(
-"jakarta.validation.constraints.Min28
--
-'com.booking.dto.PassengerCount.children30
-
-children31
-:
-4com.booking.dto.PassengerCount#getTotalPassengers()I33
-
-method34
-
-getTotalPassengers35
-
-
-references36J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6j´
-B
-22<
-222324 *
-1	 	(210:7B
-
-
-13
-25
-
-
-15
-26
-B
-32<
-323334 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-35
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-
-17
-171819
-B
-29<
-293024 *
-1 (210:7B
-
-
-13
-25
-
-
-15
-31
-
-27
-272819rØ
-
-101720*
-1 (
-
-101721*
-1 (
-
-222720*
-1	 	(	
-
-222721*
-1	 	(
-
-292720*
-1 (	
-
-292721*
-1 (
-
-322236*
-1
- (
-
-322936*
-1 (

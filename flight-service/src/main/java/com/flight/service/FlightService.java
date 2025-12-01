@@ -15,7 +15,6 @@ import com.flight.response.FlightSearchResponse.FlightInfo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Slf4j
@@ -24,10 +23,10 @@ import reactor.core.publisher.Mono;
 public class FlightService {
 
 	private final FlightRepository flightRepository;
-	
+
 	public Mono<Flight> getFlightByNumber(String flightNumber) {
-        return flightRepository.findByFlightNumber(flightNumber);
-    }
+		return flightRepository.findByFlightNumber(flightNumber);
+	}
 
 	public Mono<FlightSearchResponse> searchFlights(FlightSearchRequest request) {
 
@@ -38,7 +37,7 @@ public class FlightService {
 		if (request.getDepartDate().isBefore(LocalDate.now())) {
 			throw new BadRequestException("Departure date cannot be in the past");
 		}
-		
+
 		if (request.getPassengers().getTotalPassengers() < 1) {
 			throw new BadRequestException("At least one passenger must be selected");
 		}

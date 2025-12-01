@@ -1,30 +1,0 @@
-
--com.booking.entity.Booking#%field_initializer
-__unknown_file ("1*“
-1 (ï
-ì
-j
-`D:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/entity/Booking.java'* '(=
-%0java.time.LocalDateTime"6java.time.LocalDateTime#now()Ljava/time/LocalDateTime;*'
- ("
-java.time.LocalDateTimeÖ
-Ó
-j
-`D:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/entity/Booking.java' '(>2
-com.booking.entity.Booking"
-bookingTimestamp"__id*+
- (
-
-%0java.time.LocalDateTime·
-´
-j
-`D:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/entity/Booking.java- -("(
-com.booking.entity.Booking"
-status"__id*
- (
-
-BOOKED"
-h
-`D:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/entity/Booking.java .(
-implicit returnB
-com.booking.entity.Booking

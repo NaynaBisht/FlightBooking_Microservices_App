@@ -1,17 +1,0 @@
-
-jcom.booking.config.RabbitMQConfig#converter()Lorg/springframework/amqp/support/converter/MessageConverter;q
-gD:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/config/RabbitMQConfig.java (%"1*è
-11 (S¥¢
-5 (QM
-%0Gorg.springframework.amqp.support.converter.Jackson2JsonMessageConverter"Gorg.springframework.amqp.support.converter.Jackson2JsonMessageConverterÓ
-Ð
-1 (S
-%1"Qorg.springframework.amqp.support.converter.Jackson2JsonMessageConverter#<init>()V*k
-
-__unknown_file (O
-M
-%0Gorg.springframework.amqp.support.converter.Jackson2JsonMessageConverter"[
-* (TO
-M
-%0Gorg.springframework.amqp.support.converter.Jackson2JsonMessageConverterB%#
-!com.booking.config.RabbitMQConfigH

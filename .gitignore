@@ -1,1 +1,52 @@
-/.metadata/
+# --- Maven ---
+.metadata/
+target/
+**/target/
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+mvnw
+mvnw.cmd
+.mvn/
+
+# --- IDE Files (Eclipse / STS) ---
+.classpath
+.project
+.settings/
+.factorypath
+**/bin/
+
+# --- IDE Files (VS Code) ---
+.vscode/
+*.code-workspace
+
+# --- IDE Files (IntelliJ IDEA) ---
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# --- Spring Boot & Logs ---
+*.log
+logs/
+hs_err_pid*
+
+# --- SonarCloud / SonarQube ---
+.scannerwork/
+.sonar/
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+
+# --- Docker (Optional - depends if you want to track them) ---
+# Keeping docker-compose.yml is good, but ignore local overrides if any
+docker-compose.override.yml
+
+# --- Secrets (Safety Check) ---
+# Ideally, you shouldn't have these, but good to ignore just in case
+secrets.properties
+credentials.json

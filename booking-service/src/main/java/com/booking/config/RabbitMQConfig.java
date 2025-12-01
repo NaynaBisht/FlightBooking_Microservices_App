@@ -13,18 +13,18 @@ public class RabbitMQConfig {
 	public static final String ROUTING_KEY = "email_routing_key";
 
 	@Bean
-	public Queue queue() {
+	public Queue emailQueue() {
 		return new Queue(QUEUE);
 	}
 
 	@Bean
-	public TopicExchange exchange() {
+	public TopicExchange emailExchange() {
 		return new TopicExchange(EXCHANGE);
 	}
 
 	@Bean
-	public Binding binding(Queue queue, TopicExchange exchange) {
-		return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
+	public Binding binding(Queue emailQueue, TopicExchange emailExchange) {
+	    return BindingBuilder.bind(emailQueue).to(emailExchange).with(ROUTING_KEY);
 	}
 
 	@Bean

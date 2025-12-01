@@ -3,7 +3,6 @@ package com.booking.service;
 import java.time.LocalDateTime;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -36,8 +35,7 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 public class BookingService {
 
-	@Autowired
-	private FlightClient flightClient;
+	private final FlightClient flightClient;
 	private final BookingRepository bookingRepository;
 	private final PnrGeneratorService pnrGeneratorService;
 

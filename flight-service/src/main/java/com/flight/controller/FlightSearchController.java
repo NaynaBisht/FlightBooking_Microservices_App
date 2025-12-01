@@ -39,7 +39,7 @@ public class FlightSearchController {
         log.info("Fetching details for flight number: {}", flightNumber);
         
         return flightService.getFlightByNumber(flightNumber)
-                .map(flight -> ResponseEntity.ok(flight))
+        		.map(ResponseEntity::ok)
                 .switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
     }
 
