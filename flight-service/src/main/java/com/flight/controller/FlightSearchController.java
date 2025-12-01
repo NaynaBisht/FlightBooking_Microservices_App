@@ -18,7 +18,7 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
-@RequestMapping("api/flight")
+@RequestMapping("/api/flight")
 @RequiredArgsConstructor
 public class FlightSearchController {
 

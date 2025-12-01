@@ -23,6 +23,7 @@ public class FlightClient {
                 // Now you only need the specific path
                 .uri("/api/flight/{flightNumber}", flightNumber) 
                 .retrieve()
+                .onStatus(status -> status.value() == 404, response -> Mono.empty())
                 .bodyToMono(FlightDTO.class);
     }
 }
