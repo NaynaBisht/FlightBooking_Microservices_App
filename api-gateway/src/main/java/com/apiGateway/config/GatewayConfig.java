@@ -12,11 +12,16 @@ public class GatewayConfig {
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
 				// Route 1: Booking Service (Dynamic Load Balancing)
-				.route("booking-service",
-						r -> r.path("/api/flight/booking/**", "/api/flight/ticket/**").uri("lb://BOOKING-SERVICE"))
+				.route("booking-service", r -> r.path("/api/flight/booking/**", "/api/flight/ticket/**")
+						.filters(f -> f.circuitBreaker(
+								c -> c.setName("bookingCircuitBreaker").setFallbackUri("forward:/fallback/booking"))) // fails
+						.uri("lb://BOOKING-SERVICE"))
 
-				// Route 2: Flight Service (Dynamic Load Balancing)
-				.route("flight-service", r -> r.path("/api/flight/**").uri("lb://FLIGHT-SERVICE")).build();
-
+				// Route 2: Flight Service with Circuit Breaker
+				.route("flight-service", r -> r.path("/api/flight/**")
+						.filters(f -> f.circuitBreaker(
+								c -> c.setName("flightCircuitBreaker").setFallbackUri("forward:/fallback/flight")))
+						.uri("lb://FLIGHT-SERVICE"))
+				.build();
 	}
 }
