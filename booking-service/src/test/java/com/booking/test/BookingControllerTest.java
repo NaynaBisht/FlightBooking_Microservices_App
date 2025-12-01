@@ -175,4 +175,36 @@ class BookingControllerTest {
         req.setPassengers(List.of(p));
         return req;
     }
+    @Test
+    void getTicketDetails_NotFoundMessage() {
+        when(bookingService.getBookingByPnr("NF123"))
+                .thenReturn(Mono.error(new RuntimeException("Booking not found for PNR")));
+
+        webTestClient.get().uri("/api/flight/ticket/NF123")
+                .exchange()
+                .expectStatus().isNotFound();
+    }
+    @Test
+    void bookFlight_FlightNotFoundMessage() {
+        BookingRequest req = createValidRequest();
+
+        when(bookingService.bookFlight(anyString(), any()))
+                .thenReturn(Mono.error(new RuntimeException("Flight not found")));
+
+        webTestClient.post().uri("/api/flight/booking/FL1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(req)
+                .exchange()
+                .expectStatus().isNotFound();   // EXACTLY THIS
+    }
+    @Test
+    void cancelBooking_NotFoundMessage() {
+        when(bookingService.cancelBooking("NF999"))
+                .thenReturn(Mono.error(new RuntimeException("not found")));
+
+        webTestClient.delete().uri("/api/flight/booking/cancel/NF999")
+                .exchange()
+                .expectStatus().isNotFound();
+    }
+
 }

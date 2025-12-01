@@ -27,6 +27,9 @@ import com.booking.request.BookingRequest;
 import com.booking.request.PassengerRequest;
 import com.booking.service.BookingService;
 import com.booking.service.PnrGeneratorService;
+import com.common.dto.BadRequestException;
+import com.common.dto.ResourceNotFoundException;
+import com.common.dto.SeatUnavailableException;
 
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
@@ -137,4 +140,68 @@ class BookingServiceTest {
         req.setPassengers(Collections.singletonList(p));
         return req;
     }
+    @Test
+    void bookFlight_FlightNotFound() {
+        BookingRequest req = createRequest(1);
+
+        when(flightClient.findByFlightNumber("AI404"))
+                .thenReturn(Mono.empty()); // triggers ResourceNotFoundException
+
+        StepVerifier.create(bookingService.bookFlight("AI404", req))
+                .expectErrorMatches(ex ->
+                        ex instanceof ResourceNotFoundException &&
+                        ex.getMessage().contains("Flight not found"))
+                .verify();
+    }
+    @Test
+    void bookFlight_InsufficientSeats() {
+        BookingRequest req = createRequest(2); // wants 2 seats
+
+        FlightDTO flight = createFlightDTO("AI101", 1, 5000f); // only 1 seat
+
+        when(flightClient.findByFlightNumber("AI101")).thenReturn(Mono.just(flight));
+
+        StepVerifier.create(bookingService.bookFlight("AI101", req))
+                .expectErrorMatches(ex -> 
+                    ex instanceof SeatUnavailableException &&
+                    ex.getMessage().contains("Insufficient seat availability"))
+                .verify();
+    }
+    @Test
+    void bookFlight_PassengerCountMismatch() {
+        BookingRequest req = createRequest(1);
+        req.setNumberOfSeats(2); // mismatch
+
+        FlightDTO flight = createFlightDTO("AI101", 5, 5000);
+
+        when(flightClient.findByFlightNumber("AI101")).thenReturn(Mono.just(flight));
+
+        StepVerifier.create(bookingService.bookFlight("AI101", req))
+                .expectErrorMatches(ex ->
+                        ex instanceof BadRequestException &&
+                        ex.getMessage().contains("Passenger count must match"))
+                .verify();
+    }
+
+    @Test
+    void getBookingByPnr_NotFound() {
+        when(bookingRepository.findByPnr("BAD123")).thenReturn(Mono.empty());
+
+        StepVerifier.create(bookingService.getBookingByPnr("BAD123"))
+                .expectErrorMatches(ex ->
+                        ex instanceof ResourceNotFoundException &&
+                        ex.getMessage().contains("Booking not found"))
+                .verify();
+    }
+    @Test
+    void cancelBooking_NotFound() {
+        when(bookingRepository.findByPnr("BADPNR")).thenReturn(Mono.empty());
+
+        StepVerifier.create(bookingService.cancelBooking("BADPNR"))
+                .expectErrorMatches(ex ->
+                        ex instanceof ResourceNotFoundException &&
+                        ex.getMessage().contains("Booking not found"))
+                .verify();
+    }
+
 }
