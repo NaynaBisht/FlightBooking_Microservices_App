@@ -1,0 +1,17 @@
+
+bcom.apiGateway.controller.FallbackController#bookingServiceFallback()Lreactor/core/publisher/Mono;x
+nD:/FlightBooking_Microservices_App/api-gateway/src/main/java/com/apiGateway/controller/FallbackController.java (+"1*ê
+1	 (©
+¦
+	 (]!
+%0reactor.core.publisher.Mono"Qreactor.core.publisher.Mono#just(Ljava/lang/Object;)Lreactor/core/publisher/Mono;*;
+
+__unknown_file ("
+reactor.core.publisher.Mono*g
+
+__unknown_file (KI
+GBooking Service is taking longer than expected. Please try again later."/
+ (^#
+!
+%0reactor.core.publisher.MonoB0.
+,com.apiGateway.controller.FallbackControllerH

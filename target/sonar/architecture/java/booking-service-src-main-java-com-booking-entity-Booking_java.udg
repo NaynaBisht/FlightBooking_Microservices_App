@@ -1,0 +1,352 @@
+
+1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764617000271*java2.Bè
+B
+=booking-service/src/main/java/com/booking/entity/Booking.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+booking-service6
+
+package8
+'
+"booking-service:com.booking.entity9
+ 
+com.booking.entity.Booking11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+
+Booking16
+
+lombok.Data18
+
+unknown19
+
+annotated by20
+
+
+uses21
+<
+6org.springframework.data.mongodb.core.mapping.Document23
+#
+com.booking.entity.Booking.id25
+
+field26
+
+private27
+
+id28
+,
+&org.springframework.data.annotation.Id30
+-
+'com.booking.entity.Booking.flightNumber32
+
+flightNumber33
+$
+com.booking.entity.Booking.pnr35
+	
+pnr36
+(
+"com.booking.entity.Booking.emailId38
+
+emailId39
+-
+'jakarta.validation.constraints.NotBlank41
+*
+$jakarta.validation.constraints.Email43
+.
+(com.booking.entity.Booking.contactNumber45
+
+contactNumber46
+,
+&jakarta.validation.constraints.Pattern48
+.
+(com.booking.entity.Booking.numberOfSeats50
+
+numberOfSeats51
+,
+&jakarta.validation.constraints.NotNull53
+(
+"jakarta.validation.constraints.Min55
+1
++com.booking.entity.Booking.bookingTimestamp57
+
+bookingTimestamp58
+&
+ com.booking.entity.Booking.price60
+
+price61
++
+%com.booking.entity.Booking.totalPrice63
+
+
+totalPrice64
++
+%com.booking.entity.Booking.passengers66
+
+
+passengers67
+"
+com.booking.entity.Passenger69
+'
+!com.booking.entity.Booking.status71
+
+status72J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j‡
+B
+24<
+242526 *
+1 (210:7B
+
+
+13
+27
+
+
+15
+28
+
+47
+474819
+B
+70<
+707126 *
+1- -(	210:7B
+
+
+13
+27
+
+
+15
+72
+
+42
+424319
+
+52
+525319
+B
+56<
+565726 *
+1' '(	210:7B
+
+
+13
+27
+
+
+15
+58
+B
+59<
+596026 *
+1( ((	210:7B
+
+
+13
+27
+
+
+15
+61
+B
+37<
+373826 *
+1 (210:7B
+
+
+13
+27
+
+
+15
+39
+B
+31<
+313226 *
+1 (	210:7B
+
+
+13
+27
+
+
+15
+33
+
+22
+222319
+B
+62<
+626326 *
+1) )(	210:7B
+
+
+13
+27
+
+
+15
+64
+
+68
+686919
+
+40
+404119
+B
+44<
+444526 *
+1 (210:7B
+
+
+13
+27
+
+
+15
+46
+
+17
+171819
+B
+49<
+495026 *
+1# #(210:7B
+
+
+13
+27
+
+
+15
+51
+>
+108
+101112 *
+1 (:7B
+
+
+13
+14
+
+
+15
+16
+B
+65<
+656626 *
+1+ +(	210:7B
+
+
+13
+27
+
+
+15
+67
+B
+34<
+343526 *
+1 (	210:7B
+
+
+13
+27
+
+
+15
+36
+
+29
+293019
+
+54
+545519rÅ
+
+101720*
+1 (
+
+101721*
+1 (
+
+102220*
+1 (#
+
+102221*
+1 (
+
+
+242920*
+1 (
+
+242921*
+1 (
+
+374020*
+1 (*
+
+374021*
+1 (
+
+374220*
+1 (*
+
+374221*
+1 (
+
+444020*
+1 (3
+
+444021*
+1 (
+
+444720*
+1   ($
+
+444721*
+1   (
+
+
+495220*
+1# #(
+
+
+495221*
+1# #(
+
+
+495420*
+1$ $(	
+
+495421*
+1$ $(
+
+656821*
+1+ +(

@@ -1,0 +1,225 @@
+
+1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764617002618*java2.B¾
+A
+<booking-service/src/main/java/com/booking/dto/FlightDTO.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+booking-service6
+
+package8
+$
+booking-service:com.booking.dto9
+
+com.booking.dto.FlightDTO11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+
+	FlightDTO16
+
+lombok.Data18
+
+unknown19
+
+annotated by20
+
+
+uses21
+"
+com.booking.dto.FlightDTO.id23
+
+field24
+
+private25
+
+id26
+,
+&com.booking.dto.FlightDTO.flightNumber28
+
+flightNumber29
++
+%com.booking.dto.FlightDTO.airlineName31
+
+airlineName32
+0
+*com.booking.dto.FlightDTO.departingAirport34
+
+departingAirport35
+.
+(com.booking.dto.FlightDTO.arrivalAirport37
+
+arrivalAirport38
+-
+'com.booking.dto.FlightDTO.departureTime40
+
+departureTime41
++
+%com.booking.dto.FlightDTO.arrivalTime43
+
+arrivalTime44
+%
+com.booking.dto.FlightDTO.price46
+
+price47
+.
+(com.booking.dto.FlightDTO.availableSeats49
+
+availableSeats50J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j¸
+B
+36<
+363724 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+38
+>
+108
+101112 *
+1 (:7B
+
+
+13
+14
+
+
+15
+16
+B
+45<
+454624 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+47
+B
+48<
+484924 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+50
+
+17
+171819
+B
+22<
+222324 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+26
+B
+33<
+333424 *
+1
+ 
+(210:7B
+
+
+13
+25
+
+
+15
+35
+B
+30<
+303124 *
+1	 	(210:7B
+
+
+13
+25
+
+
+15
+32
+B
+39<
+394024 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+41
+B
+27<
+272824 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+29
+B
+42<
+424324 *
+1 (210:7B
+
+
+13
+25
+
+
+15
+44r6
+
+101720*
+1 (
+
+101721*
+1 (

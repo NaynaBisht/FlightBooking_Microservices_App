@@ -1,0 +1,27 @@
+
+Ycom.booking.config.RabbitMQConfig#exchange()Lorg/springframework/amqp/core/TopicExchange;q
+gD:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/config/RabbitMQConfig.java (!"1*þ
+1? (GZ
+X
+? (G
+%0java.lang.String"__id*.
+
+__unknown_file (
+email_exchangelj
+1 (>1
+%1+org.springframework.amqp.core.TopicExchange"+org.springframework.amqp.core.TopicExchangeã
+à
+- (H
+%2"Gorg.springframework.amqp.core.TopicExchange#<init>(Ljava/lang/String;)V*O
+
+__unknown_file (3
+1
+%1+org.springframework.amqp.core.TopicExchange*4
+
+__unknown_file (
+
+%0java.lang.String"?
+& (I3
+1
+%1+org.springframework.amqp.core.TopicExchangeB%#
+!com.booking.config.RabbitMQConfigH

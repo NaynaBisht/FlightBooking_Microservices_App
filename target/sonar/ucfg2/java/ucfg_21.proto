@@ -1,0 +1,28 @@
+
+4__sonar_lambda_2$com.apiGateway.config.GatewayConfigo
+eD:/FlightBooking_Microservices_App/api-gateway/src/main/java/com/apiGateway/config/GatewayConfig.java (["1*Í	
+1 (®•
+ (/d
+%5^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config"⁄org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config#setName(Ljava/lang/String;)Lorg/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerFilterFactory$Config;*Å
+
+__unknown_file (e
+c
+c^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config*5
+
+__unknown_file (
+bookingCircuitBreaker2setName(Ljava/lang/String;)ª∏
+ ([d
+%6^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config"·org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config#setFallbackUri(Ljava/lang/String;)Lorg/springframework/cloud/gateway/filter/factory/SpringCloudCircuitBreakerFilterFactory$Config;*Ç
+
+__unknown_file (f
+d
+%5^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config*9
+
+__unknown_file (
+forward:/fallback/booking2"setFallbackUri(Ljava/lang/String;)"r
+ ([f
+d
+%6^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$Config:o
+ (	c
+c^org.springframework.cloud.gateway.filter.factory.SpringCloudCircuitBreakerFilterFactory$ConfigB
+java.util.function.Consumer

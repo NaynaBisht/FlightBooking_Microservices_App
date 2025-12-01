@@ -1,0 +1,16 @@
+
+0__sonar_lambda_7$com.booking.client.FlightCliento
+eD:/FlightBooking_Microservices_App/booking-service/src/main/java/com/booking/client/FlightClient.java/ (G"1*ð
+1; (?¯
+¬
+; (G!
+%8reactor.core.publisher.Mono"@reactor.core.publisher.Mono#empty()Lreactor/core/publisher/Mono;*;
+
+__unknown_file ("
+reactor.core.publisher.Mono"/
+; (G#
+!
+%8reactor.core.publisher.Mono:W
+/ (7K
+response?org.springframework.web.reactive.function.client.ClientResponseB
+java.util.function.Function

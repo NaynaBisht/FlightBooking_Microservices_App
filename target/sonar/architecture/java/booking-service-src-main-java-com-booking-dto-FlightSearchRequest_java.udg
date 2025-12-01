@@ -1,0 +1,225 @@
+
+1.0*NaynaBisht_FlightBooking_Microservices_AppJavaFrontend"1764616999269*java2.B•
+K
+Fbooking-service/src/main/java/com/booking/dto/FlightSearchRequest.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+booking-service6
+
+package8
+$
+booking-service:com.booking.dto9
+)
+#com.booking.dto.FlightSearchRequest11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+
+FlightSearchRequest16
+
+lombok.Data18
+
+unknown19
+
+annotated by20
+
+
+uses21
+
+lombok.AllArgsConstructor23
+
+lombok.NoArgsConstructor25
+:
+4com.booking.dto.FlightSearchRequest.departingAirport27
+
+field28
+
+private29
+
+departingAirport30
+-
+'jakarta.validation.constraints.NotBlank32
+8
+2com.booking.dto.FlightSearchRequest.arrivalAirport34
+
+arrivalAirport35
+4
+.com.booking.dto.FlightSearchRequest.departDate37
+
+
+departDate38
+,
+&jakarta.validation.constraints.NotNull40
+4
+.com.booking.dto.FlightSearchRequest.passengers42
+
+
+passengers43
+$
+com.booking.dto.PassengerCount45
+
+is type46J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j»
+
+31
+313219
+
+44
+444519
+B
+36<
+363728 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+38
+
+17
+171819
+B
+26<
+262728 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+30
+
+39
+394019
+>
+108
+101112 *
+1 (!:7B
+
+
+13
+14
+
+
+15
+16
+
+22
+222319
+B
+33<
+333428 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+35
+B
+41<
+414228 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+43
+
+24
+242519rÀ
+
+101720*
+1
+ 
+(
+
+101721*
+1
+ 
+(
+
+102220*
+1 (
+
+102221*
+1 (
+
+102420*
+1 (
+
+102421*
+1 (
+
+263120*
+1 (6
+
+263121*
+1 (
+
+333120*
+1 (4
+
+333121*
+1 (
+
+363920*
+1 (2
+
+363921*
+1 (
+
+
+414446*
+1
+ (
+
+413920*
+1 (6
+
+413921*
+1 (
+
+
+414421*
+1
+ (
+
+414421*
+1 (#
