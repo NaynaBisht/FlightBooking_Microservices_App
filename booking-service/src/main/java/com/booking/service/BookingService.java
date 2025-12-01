@@ -39,8 +39,7 @@ public class BookingService {
 	private final BookingRepository bookingRepository;
 	private final PnrGeneratorService pnrGeneratorService;
 
-	@Autowired
-	private RabbitTemplate rabbitTemplate;
+	private final RabbitTemplate rabbitTemplate;
 
 	public Mono<BookingResponse> bookFlight(String flightNumber, BookingRequest request) {
 
