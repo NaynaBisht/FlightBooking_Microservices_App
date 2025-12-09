@@ -1,0 +1,1308 @@
+Attaching to api-gateway, booking-service, config-server, eureka-server, flight-service, notification-service, rabbitmq, user-service
+eureka-server  | 
+eureka-server  |   .   ____          _            __ _ _
+eureka-server  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+eureka-server  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+eureka-server  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+eureka-server  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+eureka-server  |  =========|_|==============|___/=/_/_/_/
+eureka-server  | 
+eureka-server  |  :: Spring Boot ::                (v4.0.0)
+eureka-server  | 
+config-server  | 
+config-server  |   .   ____          _            __ _ _
+config-server  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+config-server  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+config-server  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+config-server  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+config-server  |  =========|_|==============|___/=/_/_/_/
+config-server  | 
+config-server  |  :: Spring Boot ::                (v4.0.0)
+config-server  | 
+eureka-server  | 2025-12-09T10:30:41.504Z  INFO 1 --- [eureka-server] [           main] com.eureka.EurekaServerApplication       : Starting EurekaServerApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+eureka-server  | 2025-12-09T10:30:41.558Z  INFO 1 --- [eureka-server] [           main] com.eureka.EurekaServerApplication       : No active profile set, falling back to 1 default profile: "default"
+config-server  | 2025-12-09T10:30:41.624Z  INFO 1 --- [config-server] [           main] com.config.ConfigServerApplication       : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+config-server  | 2025-12-09T10:30:41.641Z  INFO 1 --- [config-server] [           main] com.config.ConfigServerApplication       : No active profile set, falling back to 1 default profile: "default"
+user-service   | 
+user-service   |   .   ____          _            __ _ _
+user-service   |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+user-service   | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+user-service   |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+user-service   |   '  |____| .__|_| |_|_| |_\__, | / / / /
+user-service   |  =========|_|==============|___/=/_/_/_/
+user-service   |  :: Spring Boot ::                (v3.2.4)
+user-service   | 
+notification-service  | 
+notification-service  |   .   ____          _            __ _ _
+notification-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+notification-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+notification-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+notification-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+notification-service  |  =========|_|==============|___/=/_/_/_/
+notification-service  | 
+notification-service  |  :: Spring Boot ::                (v4.0.0)
+notification-service  | 
+user-service          | 2025-12-09T10:30:42.833Z  INFO 1 --- [USER-SERVICE] [           main] com.user.UserServiceApplication          : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+user-service          | 2025-12-09T10:30:42.863Z  INFO 1 --- [USER-SERVICE] [           main] com.user.UserServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+api-gateway           | 
+api-gateway           |   .   ____          _            __ _ _
+api-gateway           |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-gateway           | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-gateway           |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-gateway           |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-gateway           |  =========|_|==============|___/=/_/_/_/
+api-gateway           | 
+api-gateway           |  :: Spring Boot ::                (v4.0.0)
+api-gateway           | 
+notification-service  | 2025-12-09T10:30:43.074Z  INFO 1 --- [notification-service] [           main] c.n.NotificationServiceApplication       : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+notification-service  | 2025-12-09T10:30:43.125Z  INFO 1 --- [notification-service] [           main] c.n.NotificationServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+flight-service        | 
+flight-service        |   .   ____          _            __ _ _
+flight-service        |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+flight-service        | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+flight-service        |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+flight-service        |   '  |____| .__|_| |_|_| |_\__, | / / / /
+flight-service        |  =========|_|==============|___/=/_/_/_/
+flight-service        | 
+flight-service        |  :: Spring Boot ::                (v4.0.0)
+flight-service        | 
+booking-service       | 
+booking-service       |   .   ____          _            __ _ _
+booking-service       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+booking-service       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+booking-service       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+booking-service       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+booking-service       |  =========|_|==============|___/=/_/_/_/
+booking-service       | 
+api-gateway           | 2025-12-09T10:30:43.822Z  INFO 1 --- [API-GATEWAY] [           main] com.apigateways.ApiGatewayApplication    : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+booking-service       |  :: Spring Boot ::                (v4.0.0)
+booking-service       | 
+api-gateway           | 2025-12-09T10:30:43.877Z  INFO 1 --- [API-GATEWAY] [           main] com.apigateways.ApiGatewayApplication    : No active profile set, falling back to 1 default profile: "default"
+flight-service        | 2025-12-09T10:30:44.158Z  INFO 1 --- [flight-service] [           main] com.flight.FlightServiceApplication      : Starting FlightServiceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+flight-service        | 2025-12-09T10:30:44.208Z  INFO 1 --- [flight-service] [           main] com.flight.FlightServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+booking-service       | 2025-12-09T10:30:44.623Z  INFO 1 --- [booking-service] [           main] com.booking.BookingServiceApplication    : Starting BookingServiceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+booking-service       | 2025-12-09T10:30:44.737Z  INFO 1 --- [booking-service] [           main] com.booking.BookingServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+rabbitmq              | 2025-12-09 10:30:48.816552+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+rabbitmq              | 2025-12-09 10:30:48.857099+00:00 [notice] <0.254.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq              | [38;5;87m2025-12-09 10:30:48.858728+00:00 [notice] <0.254.0> Logging: configured log handlers are now ACTIVE[0m
+rabbitmq              | 2025-12-09 10:30:48.903598+00:00 [info] <0.254.0> ra: starting system quorum_queues[0m
+rabbitmq              | 2025-12-09 10:30:48.903902+00:00 [info] <0.254.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@ef92ee0ef475/quorum/rabbit@ef92ee0ef475[0m
+config-server         | 2025-12-09T10:30:49.274Z  INFO 1 --- [config-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0cddbe66-053f-3dc9-884e-976511af59fa
+rabbitmq              | 2025-12-09 10:30:49.286201+00:00 [info] <0.268.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+rabbitmq              | 2025-12-09 10:30:49.339996+00:00 [info] <0.269.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:49.425068+00:00 [notice] <0.274.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables[0m
+rabbitmq              | 2025-12-09 10:30:49.504582+00:00 [info] <0.254.0> ra: starting system coordination[0m
+rabbitmq              | 2025-12-09 10:30:49.505551+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@ef92ee0ef475/coordination/rabbit@ef92ee0ef475[0m
+rabbitmq              | 2025-12-09 10:30:49.520330+00:00 [info] <0.282.0> ra system 'coordination' running pre init for 0 registered servers[0m
+rabbitmq              | 2025-12-09 10:30:49.527090+00:00 [info] <0.283.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:49.527761+00:00 [notice] <0.288.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables[0m
+rabbitmq              | 2025-12-09 10:30:49.541337+00:00 [info] <0.254.0> ra: starting system coordination[0m
+rabbitmq              | 2025-12-09 10:30:49.541586+00:00 [info] <0.254.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@ef92ee0ef475/coordination/rabbit@ef92ee0ef475[0m
+rabbitmq              | 2025-12-09 10:30:50.028238+00:00 [info] <0.254.0> Waiting for Khepri leader for 30000 ms, 9 retries left[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:50.060101+00:00 [notice] <0.292.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 1[0m
+rabbitmq              | 2025-12-09 10:30:50.111997+00:00 [info] <0.254.0> Khepri leader elected[0m
+rabbitmq              | 2025-12-09 10:30:50.112289+00:00 [info] <0.254.0> Waiting for Khepri projections for 30000 ms, 9 retries left[0m
+user-service          | 2025-12-09T10:30:51.014Z  INFO 1 --- [USER-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+config-server         | 2025-12-09T10:30:51.037Z  INFO 1 --- [config-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8888 (http)
+config-server         | 2025-12-09T10:30:51.091Z  INFO 1 --- [config-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+config-server         | 2025-12-09T10:30:51.092Z  INFO 1 --- [config-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+rabbitmq              | 2025-12-09 10:30:51.204605+00:00 [info] <0.254.0> [0m
+rabbitmq              | 2025-12-09 10:30:51.204605+00:00 [info] <0.254.0>  Starting RabbitMQ 3.13.7 on Erlang 26.2.5.16 [jit][0m
+rabbitmq              | 2025-12-09 10:30:51.204605+00:00 [info] <0.254.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries[0m
+rabbitmq              | 2025-12-09 10:30:51.204605+00:00 [info] <0.254.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+rabbitmq              | 
+rabbitmq              |   ##  ##      RabbitMQ 3.13.7
+rabbitmq              |   ##  ##
+rabbitmq              |   ##########  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+rabbitmq              |   ######  ##
+rabbitmq              |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq              | 
+rabbitmq              |   Erlang:      26.2.5.16 [jit]
+rabbitmq              |   TLS Library: OpenSSL - OpenSSL 3.1.8 11 Feb 2025
+rabbitmq              |   Release series support status: see https://www.rabbitmq.com/release-information
+rabbitmq              | 
+rabbitmq              |   Doc guides:  https://www.rabbitmq.com/docs
+rabbitmq              |   Support:     https://www.rabbitmq.com/docs/contact
+rabbitmq              |   Tutorials:   https://www.rabbitmq.com/tutorials
+rabbitmq              |   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+rabbitmq              |   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+rabbitmq              | 
+rabbitmq              |   Logs: <stdout>
+rabbitmq              | 
+rabbitmq              |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq              | 
+rabbitmq              |   Starting broker...2025-12-09 10:30:51.208124+00:00 [info] <0.254.0> [0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  node           : rabbit@ef92ee0ef475[0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  home dir       : /var/lib/rabbitmq[0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  cookie hash    : PmUIj+gpCIyAh3sEhpx8zw==[0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  log(s)         : <stdout>[0m
+rabbitmq              | 2025-12-09 10:30:51.208124+00:00 [info] <0.254.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@ef92ee0ef475[0m
+eureka-server         | 2025-12-09T10:30:51.214Z  INFO 1 --- [eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cf11047e-6adc-3d88-a41c-fb77e34074b4
+config-server         | 2025-12-09T10:30:51.222Z  INFO 1 --- [config-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 9094 ms
+notification-service  | 2025-12-09T10:30:51.359Z  INFO 1 --- [notification-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+notification-service  | 2025-12-09T10:30:51.408Z  INFO 1 --- [notification-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+notification-service  | 2025-12-09T10:30:51.410Z  INFO 1 --- [notification-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+notification-service  | 2025-12-09T10:30:51.553Z  INFO 1 --- [notification-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 8092 ms
+flight-service        | 2025-12-09T10:30:51.763Z  INFO 1 --- [flight-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+user-service          | 2025-12-09T10:30:51.857Z  INFO 1 --- [USER-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 822 ms. Found 2 MongoDB repository interfaces.
+notification-service  | 2025-12-09T10:30:51.988Z  WARN 1 --- [notification-service] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailService': Unsatisfied dependency expressed through field 'mailSender': No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+notification-service  | 2025-12-09T10:30:52.006Z  INFO 1 --- [notification-service] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+notification-service  | 2025-12-09T10:30:52.043Z  INFO 1 --- [notification-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+notification-service  | 
+notification-service  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+notification-service  | 2025-12-09T10:30:52.122Z ERROR 1 --- [notification-service] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+notification-service  | 
+notification-service  | ***************************
+notification-service  | APPLICATION FAILED TO START
+notification-service  | ***************************
+notification-service  | 
+notification-service  | Description:
+notification-service  | 
+notification-service  | Field mailSender in com.notification.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+notification-service  | 
+notification-service  | The injection point has the following annotations:
+notification-service  | 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+notification-service  | 
+notification-service  | 
+notification-service  | Action:
+notification-service  | 
+notification-service  | Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+notification-service  | 
+flight-service        | 2025-12-09T10:30:52.411Z  INFO 1 --- [flight-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 606 ms. Found 1 Reactive MongoDB repository interface.
+flight-service        | 2025-12-09T10:30:52.438Z  INFO 1 --- [flight-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+flight-service        | 2025-12-09T10:30:52.449Z  INFO 1 --- [flight-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
+eureka-server         | 2025-12-09T10:30:52.604Z  INFO 1 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8761 (http)
+eureka-server         | 2025-12-09T10:30:52.659Z  INFO 1 --- [eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+eureka-server         | 2025-12-09T10:30:52.661Z  INFO 1 --- [eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+eureka-server         | 2025-12-09T10:30:52.776Z  INFO 1 --- [eureka-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 10489 ms
+booking-service       | 2025-12-09T10:30:52.881Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+[Knotification-service exited with code 1
+user-service          | 2025-12-09T10:30:53.161Z  INFO 1 --- [USER-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=27d0315c-a675-3dd2-ab6f-c40c0fe33cb6
+api-gateway           | 2025-12-09T10:30:53.392Z  INFO 1 --- [API-GATEWAY] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f93ec5b8-7f65-3cb4-b4fc-f705890f24a1
+booking-service       | 2025-12-09T10:30:53.492Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 563 ms. Found 1 Reactive MongoDB repository interface.
+booking-service       | 2025-12-09T10:30:53.524Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+booking-service       | 2025-12-09T10:30:53.561Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 MongoDB repository interfaces.
+user-service          | 2025-12-09T10:30:53.782Z  WARN 1 --- [USER-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+user-service          | 2025-12-09T10:30:53.799Z  WARN 1 --- [USER-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+rabbitmq              | 2025-12-09 10:30:53.854739+00:00 [info] <0.254.0> Running boot step pre_boot defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.855182+00:00 [info] <0.254.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.856777+00:00 [info] <0.254.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.857706+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.862818+00:00 [info] <0.254.0> Running boot step rabbit_alarm defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.929885+00:00 [info] <0.329.0> Memory high watermark set to 3041 MiB (3189427404 bytes) of 7604 MiB (7973568512 bytes) total[0m
+rabbitmq              | 2025-12-09 10:30:53.950804+00:00 [info] <0.331.0> Enabling free disk space monitoring (disk free space: 1010521755648, total memory: 7973568512)[0m
+rabbitmq              | 2025-12-09 10:30:53.951123+00:00 [info] <0.331.0> Disk free limit set to 50MB[0m
+rabbitmq              | 2025-12-09 10:30:53.961163+00:00 [info] <0.254.0> Running boot step code_server_cache defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:53.961623+00:00 [info] <0.254.0> Running boot step file_handle_cache defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:54.036635+00:00 [info] <0.334.0> Limiting to approx 1048479 file handles (943629 sockets)[0m
+rabbitmq              | 2025-12-09 10:30:54.037358+00:00 [info] <0.335.0> FHC read buffering: OFF[0m
+rabbitmq              | 2025-12-09 10:30:54.037793+00:00 [info] <0.335.0> FHC write buffering: ON[0m
+rabbitmq              | 2025-12-09 10:30:54.039783+00:00 [info] <0.254.0> Running boot step worker_pool defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:54.040321+00:00 [info] <0.315.0> Will use 16 processes for default worker pool[0m
+rabbitmq              | 2025-12-09 10:30:54.043314+00:00 [info] <0.315.0> Starting worker pool 'worker_pool' with 16 processes in it[0m
+rabbitmq              | 2025-12-09 10:30:54.046628+00:00 [info] <0.254.0> Running boot step database defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:54.056966+00:00 [info] <0.254.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.063471+00:00 [notice] <0.316.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+flight-service        | 2025-12-09T10:30:54.120Z  INFO 1 --- [flight-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9fb4fb81-7c1a-3db2-800a-c471ab8ad0b0
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.327736+00:00 [notice] <0.316.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.328346+00:00 [notice] <0.316.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.619823+00:00 [notice] <0.316.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.620703+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_update_config_command`...[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.903949+00:00 [notice] <0.316.0> Feature flags: `stream_update_config_command` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:54.904841+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_filtering`...[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.224203+00:00 [notice] <0.316.0> Feature flags: `stream_filtering` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.224724+00:00 [notice] <0.316.0> Feature flags: attempt to enable `stream_sac_coordinator_unblock_group`...[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.570352+00:00 [notice] <0.316.0> Feature flags: `stream_sac_coordinator_unblock_group` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.570836+00:00 [notice] <0.316.0> Feature flags: attempt to enable `restart_streams`...[0m
+user-service          | 2025-12-09T10:30:55.608Z  INFO 1 --- [USER-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+user-service          | 2025-12-09T10:30:55.875Z  INFO 1 --- [USER-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+user-service          | 2025-12-09T10:30:55.881Z  INFO 1 --- [USER-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.887987+00:00 [notice] <0.316.0> Feature flags: `restart_streams` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:55.888778+00:00 [notice] <0.316.0> Feature flags: attempt to enable `message_containers`...[0m
+booking-service       | 2025-12-09T10:30:56.075Z  INFO 1 --- [booking-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=09255273-fca5-3c83-9837-4357519c42cd
+user-service          | 2025-12-09T10:30:56.146Z  INFO 1 --- [USER-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+user-service          | 2025-12-09T10:30:56.177Z  INFO 1 --- [USER-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12652 ms
+rabbitmq              | [38;5;87m2025-12-09 10:30:56.196736+00:00 [notice] <0.316.0> Feature flags: `message_containers` enabled[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:56.197048+00:00 [notice] <0.316.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:56.519595+00:00 [notice] <0.316.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+rabbitmq              | 2025-12-09 10:30:56.521378+00:00 [info] <0.254.0> DB: virgin node -> run peer discovery[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:56.521669+00:00 [warning] <0.254.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+rabbitmq              | [38;5;87m2025-12-09 10:30:56.569156+00:00 [notice] <0.44.0> Application mnesia exited with reason: stopped[0m
+config-server         | 2025-12-09T10:30:57.139Z  INFO 1 --- [config-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8888 (http) with context path '/'
+config-server         | 2025-12-09T10:30:57.360Z  INFO 1 --- [config-server] [           main] com.config.ConfigServerApplication       : Started ConfigServerApplication in 18.815 seconds (process running for 23.06)
+rabbitmq              | 2025-12-09 10:30:57.521663+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq              | 2025-12-09 10:30:57.522134+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq              | 2025-12-09 10:30:57.522526+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq              | 2025-12-09 10:30:57.522805+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq              | 2025-12-09 10:30:57.551847+00:00 [info] <0.254.0> Waiting for Mnesia tables for 30000 ms, 9 retries left[0m
+rabbitmq              | 2025-12-09 10:30:57.552357+00:00 [info] <0.254.0> Successfully synced tables from a peer[0m
+rabbitmq              | 2025-12-09 10:30:57.553074+00:00 [info] <0.254.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.553802+00:00 [info] <0.570.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+rabbitmq              | 2025-12-09 10:30:57.554277+00:00 [info] <0.570.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+rabbitmq              | 2025-12-09 10:30:57.555089+00:00 [info] <0.570.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+rabbitmq              | 2025-12-09 10:30:57.555467+00:00 [info] <0.570.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+rabbitmq              | 2025-12-09 10:30:57.555622+00:00 [info] <0.570.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+rabbitmq              | 2025-12-09 10:30:57.555784+00:00 [info] <0.254.0> Running boot step networking_metadata_store defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.556275+00:00 [info] <0.254.0> Running boot step feature_flags defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.556895+00:00 [info] <0.254.0> Running boot step codec_correctness_check defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557036+00:00 [info] <0.254.0> Running boot step external_infrastructure defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557097+00:00 [info] <0.254.0> Running boot step rabbit_event defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557353+00:00 [info] <0.254.0> Running boot step rabbit_registry defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557558+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557738+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557847+00:00 [info] <0.254.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.557960+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558069+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558140+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558211+00:00 [info] <0.254.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558273+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558358+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558509+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558610+00:00 [info] <0.254.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.558670+00:00 [info] <0.254.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+rabbitmq              | 2025-12-09 10:30:57.559395+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_client_local defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.568750+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.570278+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_random defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.570845+00:00 [info] <0.254.0> Running boot step kernel_ready defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.571058+00:00 [info] <0.254.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.571581+00:00 [info] <0.254.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.577030+00:00 [info] <0.578.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+rabbitmq              | 2025-12-09 10:30:57.577502+00:00 [info] <0.254.0> Running boot step guid_generator defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.587894+00:00 [info] <0.254.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.588647+00:00 [info] <0.582.0> Starting rabbit_node_monitor (in ignore mode)[0m
+rabbitmq              | 2025-12-09 10:30:57.589084+00:00 [info] <0.254.0> Running boot step delegate_sup defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.591803+00:00 [info] <0.254.0> Running boot step rabbit_memory_monitor defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.594307+00:00 [info] <0.254.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.594641+00:00 [info] <0.254.0> Running boot step core_initialized defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.595275+00:00 [info] <0.254.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.595792+00:00 [info] <0.254.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.596386+00:00 [info] <0.254.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.597090+00:00 [info] <0.254.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.743346+00:00 [info] <0.254.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.744639+00:00 [info] <0.254.0> Running boot step rabbit_policies defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.745422+00:00 [info] <0.254.0> Running boot step rabbit_policy defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.745724+00:00 [info] <0.254.0> Running boot step rabbit_queue_location_validator defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.745831+00:00 [info] <0.254.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.745962+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.746173+00:00 [info] <0.254.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.746660+00:00 [info] <0.254.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.746890+00:00 [info] <0.254.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:30:57.747786+00:00 [info] <0.254.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:30:57.778786+00:00 [info] <0.254.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:30:57.779395+00:00 [info] <0.254.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:30:57.779757+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+rabbitmq              | 2025-12-09 10:30:57.779917+00:00 [info] <0.254.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq              | 2025-12-09 10:30:57.780005+00:00 [info] <0.254.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq              | 2025-12-09 10:30:57.780450+00:00 [info] <0.254.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.833129+00:00 [info] <0.254.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:57.833432+00:00 [info] <0.254.0> Will seed default virtual host and user...[0m
+rabbitmq              | 2025-12-09 10:30:57.833746+00:00 [info] <0.254.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq              | 2025-12-09 10:30:57.950275+00:00 [info] <0.642.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@ef92ee0ef475/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq              | 2025-12-09 10:30:57.968403+00:00 [info] <0.642.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+flight-service        | 2025-12-09T10:30:57.996Z  INFO 1 --- [flight-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|reactive-streams", "version": "5.6.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.6.87.2-microsoft-standard-WSL2"}, "platform": "Java/Eclipse Adoptium/21.0.9+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.MultiThreadIoEventLoopGroup@78e68401, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@391515c7, com.mongodb.Jep395RecordCodecProvider@5b0dbfb, com.mongodb.KotlinCodecProvider@4b9dbf07, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+rabbitmq              | 2025-12-09 10:30:58.011630+00:00 [info] <0.642.0> Starting message stores for vhost '/'[0m
+rabbitmq              | 2025-12-09 10:30:58.012612+00:00 [info] <0.651.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq              | 2025-12-09 10:30:58.019919+00:00 [info] <0.642.0> Started message store of type transient for vhost '/'[0m
+rabbitmq              | 2025-12-09 10:30:58.020847+00:00 [info] <0.655.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:58.025562+00:00 [warning] <0.655.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq              | 2025-12-09 10:30:58.035764+00:00 [info] <0.642.0> Started message store of type persistent for vhost '/'[0m
+rabbitmq              | 2025-12-09 10:30:58.036222+00:00 [info] <0.642.0> Recovering 0 queues of type rabbit_classic_queue took 64ms[0m
+rabbitmq              | 2025-12-09 10:30:58.036336+00:00 [info] <0.642.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq              | 2025-12-09 10:30:58.037178+00:00 [info] <0.642.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq              | 2025-12-09 10:30:58.051472+00:00 [info] <0.254.0> Created user 'guest'[0m
+rabbitmq              | 2025-12-09 10:30:58.063538+00:00 [info] <0.254.0> Successfully set user tags for user 'guest' to [administrator][0m
+rabbitmq              | 2025-12-09 10:30:58.071491+00:00 [info] <0.254.0> Successfully set permissions for user 'guest' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq              | 2025-12-09 10:30:58.072004+00:00 [info] <0.254.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.072549+00:00 [info] <0.254.0> Running boot step rabbit_looking_glass defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.075869+00:00 [info] <0.254.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.077333+00:00 [info] <0.254.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.080236+00:00 [info] <0.254.0> Running boot step routing_ready defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.080564+00:00 [info] <0.254.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.080947+00:00 [info] <0.254.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.081189+00:00 [info] <0.254.0> Running boot step networking defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.081268+00:00 [info] <0.254.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.081563+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.081693+00:00 [info] <0.315.0> Starting worker pool 'definition_import_pool' with 16 processes in it[0m
+rabbitmq              | 2025-12-09 10:30:58.088892+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.089328+00:00 [info] <0.254.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-TzlmrTKE1uA7q9piVCIgYQ'[0m
+rabbitmq              | 2025-12-09 10:30:58.099107+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.100368+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq              | 2025-12-09 10:30:58.100964+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:30:58.104827+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+rabbitmq              | 2025-12-09 10:30:58.105848+00:00 [info] <0.704.0> Resetting node maintenance status[0m
+user-service          | 2025-12-09T10:30:58.496Z  INFO 1 --- [USER-SERVICE] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+user-service          | 
+user-service          | com.mongodb.MongoSocketOpenException: Exception opening socket
+user-service          | 	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+user-service          | 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:196) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:156) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+user-service          | Caused by: java.net.ConnectException: Connection refused
+user-service          | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+user-service          | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+user-service          | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+user-service          | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+user-service          | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+user-service          | 	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+user-service          | 	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78) ~[mongodb-driver-core-4.11.1.jar!/:na]
+user-service          | 	... 4 common frames omitted
+user-service          | 
+flight-service        | 2025-12-09T10:30:58.616Z  INFO 1 --- [flight-service] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+flight-service        | 
+flight-service        | com.mongodb.MongoSocketOpenException: Exception opening socket
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.lambda$operationComplete$1(NettyStream.java:539) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.lambda$withLock$0(Locks.java:34) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.checkedWithLock(Locks.java:61) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.withLock(Locks.java:55) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.withLock(Locks.java:33) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:526) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:509) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:604) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:597) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:573) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:506) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:650) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:643) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:132) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:371) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:387) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:27017
+flight-service        | Caused by: java.net.ConnectException: Connection refused
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+flight-service        | 	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+flight-service        | 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:384) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | 
+user-service          | 2025-12-09T10:30:58.696Z  INFO 1 --- [USER-SERVICE] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.6.87.2-microsoft-standard-WSL2"}, "platform": "Java/Eclipse Adoptium/21.0.9+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7197b07f, com.mongodb.Jep395RecordCodecProvider@1f10fec6, com.mongodb.KotlinCodecProvider@7a65a360]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0> By default, this feature can still be used for now.[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+rabbitmq              | [38;5;214m2025-12-09 10:30:59.041662+00:00 [warning] <0.733.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+eureka-server         | 2025-12-09T10:31:00.104Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+eureka-server         | 2025-12-09T10:31:00.105Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+flight-service        | 2025-12-09T10:31:00.330Z  INFO 1 --- [flight-service] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+flight-service        | 
+flight-service        | com.mongodb.MongoSocketOpenException: Exception opening socket
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.lambda$operationComplete$1(NettyStream.java:539) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.lambda$withLock$0(Locks.java:34) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.checkedWithLock(Locks.java:61) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.withLock(Locks.java:55) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.Locks.withLock(Locks.java:33) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:526) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:509) ~[mongodb-driver-core-5.6.1.jar!/:na]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:604) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:597) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:573) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:506) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:650) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:643) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:132) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:371) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:387) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:27017
+flight-service        | Caused by: java.net.ConnectException: Connection refused
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+flight-service        | 	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+flight-service        | 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:384) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | 
+flight-service        | 2025-12-09T10:31:00.360Z  INFO 1 --- [flight-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.6.87.2-microsoft-standard-WSL2"}, "platform": "Java/Eclipse Adoptium/21.0.9+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.MultiThreadIoEventLoopGroup@d6b532f, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@391515c7, com.mongodb.Jep395RecordCodecProvider@5b0dbfb, com.mongodb.KotlinCodecProvider@4b9dbf07, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+booking-service       | 2025-12-09T10:31:01.095Z  INFO 1 --- [booking-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|reactive-streams", "version": "5.6.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.6.87.2-microsoft-standard-WSL2"}, "platform": "Java/Eclipse Adoptium/21.0.9+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.MultiThreadIoEventLoopGroup@7f42b194, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@8eb6f9a, com.mongodb.Jep395RecordCodecProvider@29170a47, com.mongodb.KotlinCodecProvider@2a8f8555, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+eureka-server         | 2025-12-09T10:31:01.169Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+eureka-server         | 2025-12-09T10:31:01.169Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+booking-service       | 2025-12-09T10:31:01.707Z  INFO 1 --- [booking-service] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+booking-service       | 
+booking-service       | com.mongodb.MongoSocketOpenException: Exception opening socket
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.lambda$operationComplete$1(NettyStream.java:539) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.lambda$withLock$0(Locks.java:34) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.checkedWithLock(Locks.java:61) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.withLock(Locks.java:55) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.withLock(Locks.java:33) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:526) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:509) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:604) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:597) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:573) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:506) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:650) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:643) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:132) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:371) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:387) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+booking-service       | Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:27017
+booking-service       | Caused by: java.net.ConnectException: Connection refused
+booking-service       | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+booking-service       | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+booking-service       | 	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+booking-service       | 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:384) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+booking-service       | 
+api-gateway           | 2025-12-09T10:31:02.478Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+api-gateway           | 2025-12-09T10:31:02.480Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+api-gateway           | 2025-12-09T10:31:02.483Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+api-gateway           | 2025-12-09T10:31:02.484Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+api-gateway           | 2025-12-09T10:31:02.485Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+api-gateway           | 2025-12-09T10:31:02.486Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+api-gateway           | 2025-12-09T10:31:02.487Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+api-gateway           | 2025-12-09T10:31:02.487Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+api-gateway           | 2025-12-09T10:31:02.487Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+api-gateway           | 2025-12-09T10:31:02.487Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+api-gateway           | 2025-12-09T10:31:02.488Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+api-gateway           | 2025-12-09T10:31:02.488Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Version]
+api-gateway           | 2025-12-09T10:31:02.488Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+api-gateway           | 2025-12-09T10:31:02.488Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+api-gateway           | 2025-12-09T10:31:02.488Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+eureka-server         | 2025-12-09T10:31:02.596Z  INFO 1 --- [eureka-server] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+booking-service       | 2025-12-09T10:31:03.911Z  INFO 1 --- [booking-service] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+booking-service       | 
+booking-service       | com.mongodb.MongoSocketOpenException: Exception opening socket
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.lambda$operationComplete$1(NettyStream.java:539) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.lambda$withLock$0(Locks.java:34) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.checkedWithLock(Locks.java:61) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.withLock(Locks.java:55) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.Locks.withLock(Locks.java:33) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:526) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at com.mongodb.internal.connection.netty.NettyStream$OpenChannelFutureListener.operationComplete(NettyStream.java:509) ~[mongodb-driver-core-5.6.1.jar!/:na]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:604) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:597) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:573) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:506) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:650) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:643) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:132) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:371) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:387) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+booking-service       | Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:27017
+booking-service       | Caused by: java.net.ConnectException: Connection refused
+booking-service       | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+booking-service       | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+booking-service       | 	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+booking-service       | 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:384) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:432) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar!/:4.2.7.Final]
+booking-service       | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+booking-service       | 
+booking-service       | 2025-12-09T10:31:03.927Z  INFO 1 --- [booking-service] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.6.87.2-microsoft-standard-WSL2"}, "platform": "Java/Eclipse Adoptium/21.0.9+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.MultiThreadIoEventLoopGroup@c318864, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@8eb6f9a, com.mongodb.Jep395RecordCodecProvider@29170a47, com.mongodb.KotlinCodecProvider@2a8f8555, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+api-gateway           | 2025-12-09T10:31:04.554Z  INFO 1 --- [API-GATEWAY] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+api-gateway           | 2025-12-09T10:31:04.968Z  WARN 1 --- [API-GATEWAY] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+api-gateway           | 2025-12-09T10:31:05.184Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+api-gateway           | 2025-12-09T10:31:05.320Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+api-gateway           | 2025-12-09T10:31:05.335Z  INFO 1 --- [API-GATEWAY] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway           | 2025-12-09T10:31:05.382Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+api-gateway           | 2025-12-09T10:31:05.384Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+api-gateway           | 2025-12-09T10:31:05.386Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+api-gateway           | 2025-12-09T10:31:05.393Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+api-gateway           | 2025-12-09T10:31:05.394Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+api-gateway           | 2025-12-09T10:31:05.395Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+api-gateway           | 2025-12-09T10:31:05.397Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+flight-service        | 2025-12-09T10:31:06.032Z  INFO 1 --- [flight-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+flight-service        | 2025-12-09T10:31:06.370Z  WARN 1 --- [flight-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+user-service          | 2025-12-09T10:31:06.474Z  INFO 1 --- [USER-SERVICE] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4bf8b77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e06ec83, org.springframework.security.web.context.SecurityContextHolderFilter@70c56434, org.springframework.security.web.header.HeaderWriterFilter@4af70b83, org.springframework.web.filter.CorsFilter@628962e5, org.springframework.security.web.authentication.logout.LogoutFilter@1dca62c2, com.user.security.jwt.AuthTokenFilter@28b458e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@632d4cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f10d055, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@410382cb, org.springframework.security.web.session.SessionManagementFilter@14590fe2, org.springframework.security.web.access.ExceptionTranslationFilter@a03529c, org.springframework.security.web.access.intercept.AuthorizationFilter@19d27c27]
+flight-service        | 2025-12-09T10:31:06.544Z  INFO 1 --- [flight-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+flight-service        | 2025-12-09T10:31:06.667Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+flight-service        | 2025-12-09T10:31:06.682Z  INFO 1 --- [flight-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+flight-service        | 2025-12-09T10:31:06.728Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+flight-service        | 2025-12-09T10:31:06.729Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+flight-service        | 2025-12-09T10:31:06.736Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+flight-service        | 2025-12-09T10:31:06.738Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+flight-service        | 2025-12-09T10:31:06.739Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+flight-service        | 2025-12-09T10:31:06.739Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+flight-service        | 2025-12-09T10:31:06.740Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+api-gateway           | 2025-12-09T10:31:07.087Z  INFO 1 --- [API-GATEWAY] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+api-gateway           | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:842)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:831)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplications(RestClientEurekaHttpClient.java:137)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+api-gateway           | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+api-gateway           | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+api-gateway           | 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480)
+api-gateway           | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+api-gateway           | 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+api-gateway           | 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+api-gateway           | 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1002)
+api-gateway           | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+api-gateway           | 	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:69)
+api-gateway           | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+api-gateway           | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+api-gateway           | 	at com.apigateways.ApiGatewayApplication.main(ApiGatewayApplication.java:12)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106)
+api-gateway           | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+api-gateway           | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+api-gateway           | Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 failed: Connection refused
+api-gateway           | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+api-gateway           | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+api-gateway           | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+api-gateway           | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+api-gateway           | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+api-gateway           | 	at java.base/java.net.Socket.connect(Socket.java:751)
+api-gateway           | 	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:215)
+api-gateway           | 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+api-gateway           | 	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+api-gateway           | 	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+api-gateway           | 	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+api-gateway           | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+api-gateway           | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequest(AbstractBufferingClientHttpRequest.java:89)
+api-gateway           | 	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+api-gateway           | 	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+api-gateway           | 	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+api-gateway           | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+api-gateway           | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:609)
+api-gateway           | 	... 73 more
+api-gateway           | 
+api-gateway           | 2025-12-09T10:31:07.089Z  WARN 1 --- [API-GATEWAY] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused
+api-gateway           | 2025-12-09T10:31:07.093Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/3a776a13f96c:API-GATEWAY:8765 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+api-gateway           | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+api-gateway           | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+api-gateway           | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369)
+api-gateway           | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+api-gateway           | 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+api-gateway           | 	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480)
+api-gateway           | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+api-gateway           | 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+api-gateway           | 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+api-gateway           | 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+api-gateway           | 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1002)
+api-gateway           | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+api-gateway           | 	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:69)
+api-gateway           | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+api-gateway           | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374)
+api-gateway           | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+api-gateway           | 	at com.apigateways.ApiGatewayApplication.main(ApiGatewayApplication.java:12)
+api-gateway           | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+api-gateway           | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+api-gateway           | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106)
+api-gateway           | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+api-gateway           | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+api-gateway           | 
+api-gateway           | 2025-12-09T10:31:07.094Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+api-gateway           | 2025-12-09T10:31:07.097Z  WARN 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+api-gateway           | 2025-12-09T10:31:07.099Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+api-gateway           | 2025-12-09T10:31:07.102Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+api-gateway           | 2025-12-09T10:31:07.118Z  INFO 1 --- [API-GATEWAY] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+api-gateway           | 2025-12-09T10:31:07.134Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765276267128 with initial instances count: 0
+api-gateway           | 2025-12-09T10:31:07.164Z  INFO 1 --- [API-GATEWAY] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+api-gateway           | 2025-12-09T10:31:07.168Z  INFO 1 --- [API-GATEWAY] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765276267168, current=UP, previous=STARTING]
+api-gateway           | 2025-12-09T10:31:07.195Z  INFO 1 --- [API-GATEWAY] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/3a776a13f96c:API-GATEWAY:8765: registering service...
+eureka-server         | 2025-12-09T10:31:07.422Z  WARN 1 --- [eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+eureka-server         | 2025-12-09T10:31:07.548Z  INFO 1 --- [eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+eureka-server         | 2025-12-09T10:31:07.636Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+eureka-server         | 2025-12-09T10:31:07.637Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+api-gateway           | 2025-12-09T10:31:07.635Z  INFO 1 --- [API-GATEWAY] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/API-GATEWAY": Connect to http://eureka-server:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/API-GATEWAY": Connect to http://eureka-server:8761 failed: Connection refused
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+api-gateway           | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:860)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+api-gateway           | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+api-gateway           | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+api-gateway           | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+api-gateway           | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api-gateway           | Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 failed: Connection refused
+api-gateway           | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+api-gateway           | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+api-gateway           | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+api-gateway           | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+api-gateway           | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+api-gateway           | 	at java.base/java.net.Socket.connect(Socket.java:751)
+api-gateway           | 	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:215)
+api-gateway           | 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+api-gateway           | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+api-gateway           | 	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+api-gateway           | 	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+api-gateway           | 	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+api-gateway           | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+api-gateway           | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequest(AbstractBufferingClientHttpRequest.java:89)
+api-gateway           | 	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+api-gateway           | 	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+api-gateway           | 	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+api-gateway           | 	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+api-gateway           | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+api-gateway           | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+api-gateway           | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:609)
+api-gateway           | 	... 24 more
+api-gateway           | 
+api-gateway           | 2025-12-09T10:31:07.638Z  WARN 1 --- [API-GATEWAY] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/API-GATEWAY": Connect to http://eureka-server:8761 failed: Connection refused
+eureka-server         | 2025-12-09T10:31:07.644Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765276267641 with initial instances count: 0
+api-gateway           | 2025-12-09T10:31:07.639Z  WARN 1 --- [API-GATEWAY] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/3a776a13f96c:API-GATEWAY:8765 - registration failed Cannot execute request on any known server
+api-gateway           | 
+api-gateway           | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+api-gateway           | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+api-gateway           | 
+api-gateway           | 2025-12-09T10:31:07.651Z  WARN 1 --- [API-GATEWAY] [foReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+api-gateway           | 
+api-gateway           | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.5.jar!/:2.0.5]
+api-gateway           | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+api-gateway           | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+api-gateway           | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+api-gateway           | 
+eureka-server         | 2025-12-09T10:31:07.854Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+eureka-server         | 2025-12-09T10:31:07.868Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+api-gateway           | 2025-12-09T10:31:07.954Z  INFO 1 --- [API-GATEWAY] [           main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8765 (http)
+user-service          | 2025-12-09T10:31:07.955Z  INFO 1 --- [USER-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+api-gateway           | 2025-12-09T10:31:07.958Z  INFO 1 --- [API-GATEWAY] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8765
+api-gateway           | 2025-12-09T10:31:08.012Z  INFO 1 --- [API-GATEWAY] [           main] com.apigateways.ApiGatewayApplication    : Started ApiGatewayApplication in 27.759 seconds (process running for 33.092)
+user-service          | 2025-12-09T10:31:08.120Z  WARN 1 --- [USER-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+user-service          | 2025-12-09T10:31:08.204Z  INFO 1 --- [USER-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+flight-service        | 2025-12-09T10:31:08.289Z  INFO 1 --- [flight-service] [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+flight-service        | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:842)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:831)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplications(RestClientEurekaHttpClient.java:137)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+flight-service        | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+flight-service        | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+flight-service        | 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480)
+flight-service        | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+flight-service        | 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+flight-service        | 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+flight-service        | 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1002)
+flight-service        | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+flight-service        | 	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:69)
+flight-service        | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+flight-service        | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+flight-service        | 	at com.flight.FlightServiceApplication.main(FlightServiceApplication.java:12)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106)
+flight-service        | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+flight-service        | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+flight-service        | Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+flight-service        | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+flight-service        | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+flight-service        | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+flight-service        | 	at java.base/java.net.Socket.connect(Socket.java:751)
+flight-service        | 	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:215)
+flight-service        | 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+flight-service        | 	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+flight-service        | 	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+flight-service        | 	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+flight-service        | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+flight-service        | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequest(AbstractBufferingClientHttpRequest.java:89)
+flight-service        | 	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+flight-service        | 	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+flight-service        | 	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+flight-service        | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+flight-service        | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:609)
+flight-service        | 	... 73 more
+flight-service        | 
+flight-service        | 2025-12-09T10:31:08.290Z  WARN 1 --- [flight-service] [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://eureka-server:8761/eureka/apps/": Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 2025-12-09T10:31:08.293Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/265179cac33c:flight-service:8081 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+flight-service        | 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+flight-service        | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+flight-service        | 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369)
+flight-service        | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+flight-service        | 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+flight-service        | 	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480)
+flight-service        | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+flight-service        | 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613)
+flight-service        | 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379)
+flight-service        | 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306)
+flight-service        | 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1002)
+flight-service        | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:623)
+flight-service        | 	at org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:69)
+flight-service        | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+flight-service        | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374)
+flight-service        | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+flight-service        | 	at com.flight.FlightServiceApplication.main(FlightServiceApplication.java:12)
+flight-service        | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+flight-service        | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+flight-service        | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106)
+flight-service        | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+flight-service        | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+flight-service        | 
+flight-service        | 2025-12-09T10:31:08.294Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+flight-service        | 2025-12-09T10:31:08.295Z  WARN 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+flight-service        | 2025-12-09T10:31:08.297Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+flight-service        | 2025-12-09T10:31:08.300Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+flight-service        | 2025-12-09T10:31:08.307Z  INFO 1 --- [flight-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+flight-service        | 2025-12-09T10:31:08.313Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765276268311 with initial instances count: 0
+flight-service        | 2025-12-09T10:31:08.326Z  INFO 1 --- [flight-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FLIGHT-SERVICE with eureka with status UP
+flight-service        | 2025-12-09T10:31:08.330Z  INFO 1 --- [flight-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765276268330, current=UP, previous=STARTING]
+flight-service        | 2025-12-09T10:31:08.339Z  INFO 1 --- [flight-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/265179cac33c:flight-service:8081: registering service...
+eureka-server         | 2025-12-09T10:31:08.426Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+eureka-server         | 2025-12-09T10:31:08.428Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+eureka-server         | 2025-12-09T10:31:08.428Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+eureka-server         | 2025-12-09T10:31:08.429Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+flight-service        | 2025-12-09T10:31:08.550Z  INFO 1 --- [flight-service] [           main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8081 (http)
+flight-service        | 2025-12-09T10:31:08.554Z  INFO 1 --- [flight-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+eureka-server         | 2025-12-09T10:31:08.599Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+flight-service        | 2025-12-09T10:31:08.600Z  INFO 1 --- [flight-service] [           main] com.flight.FlightServiceApplication      : Started FlightServiceApplication in 28.192 seconds (process running for 33.567)
+eureka-server         | 2025-12-09T10:31:08.634Z  INFO 1 --- [eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+eureka-server         | 2025-12-09T10:31:08.634Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+flight-service        | 2025-12-09T10:31:08.645Z  INFO 1 --- [flight-service] [foReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka-server:8761/eureka/}, exception=I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLIGHT-SERVICE": Connect to http://eureka-server:8761 failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLIGHT-SERVICE": Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+flight-service        | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:860)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+flight-service        | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+flight-service        | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+flight-service        | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+flight-service        | Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+flight-service        | 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+flight-service        | 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+flight-service        | 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+flight-service        | 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+flight-service        | 	at java.base/java.net.Socket.connect(Socket.java:751)
+flight-service        | 	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:215)
+flight-service        | 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+flight-service        | 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+flight-service        | 	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+flight-service        | 	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+flight-service        | 	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87)
+flight-service        | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+flight-service        | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequest(AbstractBufferingClientHttpRequest.java:89)
+flight-service        | 	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102)
+flight-service        | 	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+flight-service        | 	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89)
+flight-service        | 	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73)
+flight-service        | 	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50)
+flight-service        | 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80)
+flight-service        | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:609)
+flight-service        | 	... 24 more
+flight-service        | 
+flight-service        | 2025-12-09T10:31:08.645Z  WARN 1 --- [flight-service] [foReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://eureka-server:8761/eureka/apps/FLIGHT-SERVICE": Connect to http://eureka-server:8761 failed: Connection refused
+flight-service        | 2025-12-09T10:31:08.646Z  WARN 1 --- [flight-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/265179cac33c:flight-service:8081 - registration failed Cannot execute request on any known server
+flight-service        | 
+flight-service        | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | 
+flight-service        | 2025-12-09T10:31:08.647Z  WARN 1 --- [flight-service] [foReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+flight-service        | 
+flight-service        | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.5.jar!/:2.0.5]
+flight-service        | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+flight-service        | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+flight-service        | 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+flight-service        | 
+user-service          | 2025-12-09T10:31:08.667Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+eureka-server         | 2025-12-09T10:31:08.684Z  INFO 1 --- [eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+user-service          | 2025-12-09T10:31:08.687Z  INFO 1 --- [USER-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service          | 2025-12-09T10:31:08.777Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+user-service          | 2025-12-09T10:31:08.778Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+user-service          | 2025-12-09T10:31:08.783Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+user-service          | 2025-12-09T10:31:08.784Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+user-service          | 2025-12-09T10:31:08.785Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+user-service          | 2025-12-09T10:31:08.785Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+user-service          | 2025-12-09T10:31:08.785Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+eureka-server         | 2025-12-09T10:31:08.848Z  INFO 1 --- [eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+eureka-server         | 2025-12-09T10:31:08.882Z  INFO 1 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+eureka-server         | 2025-12-09T10:31:08.883Z  INFO 1 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+eureka-server         | 2025-12-09T10:31:08.884Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+eureka-server         | 2025-12-09T10:31:08.885Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+eureka-server         | 2025-12-09T10:31:08.887Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+eureka-server         | 2025-12-09T10:31:08.901Z  INFO 1 --- [eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+eureka-server         | 2025-12-09T10:31:08.911Z  INFO 1 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8761 (http) with context path '/'
+eureka-server         | 2025-12-09T10:31:08.915Z  INFO 1 --- [eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+eureka-server         | 2025-12-09T10:31:08.945Z  INFO 1 --- [eureka-server] [           main] com.eureka.EurekaServerApplication       : Started EurekaServerApplication in 30.468 seconds (process running for 35.034)
+booking-service       | 2025-12-09T10:31:09.363Z  INFO 1 --- [booking-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+booking-service       | 2025-12-09T10:31:09.535Z  WARN 1 --- [booking-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+booking-service       | 2025-12-09T10:31:09.608Z  INFO 1 --- [booking-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+booking-service       | 2025-12-09T10:31:09.680Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+booking-service       | 2025-12-09T10:31:09.688Z  INFO 1 --- [booking-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+booking-service       | 2025-12-09T10:31:09.707Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+booking-service       | 2025-12-09T10:31:09.707Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+booking-service       | 2025-12-09T10:31:09.708Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+booking-service       | 2025-12-09T10:31:09.708Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+booking-service       | 2025-12-09T10:31:09.708Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+booking-service       | 2025-12-09T10:31:09.708Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+booking-service       | 2025-12-09T10:31:09.709Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+eureka-server         | 2025-12-09T10:31:10.002Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+eureka-server         | 2025-12-09T10:31:10.003Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+eureka-server         | 2025-12-09T10:31:10.008Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+user-service          | 2025-12-09T10:31:10.261Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+user-service          | 2025-12-09T10:31:10.266Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+user-service          | 2025-12-09T10:31:10.272Z  INFO 1 --- [USER-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+user-service          | 2025-12-09T10:31:10.283Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765276270282 with initial instances count: 0
+user-service          | 2025-12-09T10:31:10.290Z  INFO 1 --- [USER-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+user-service          | 2025-12-09T10:31:10.293Z  INFO 1 --- [USER-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765276270293, current=UP, previous=STARTING]
+user-service          | 2025-12-09T10:31:10.296Z  INFO 1 --- [USER-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/4f61099409b9:USER-SERVICE:8084: registering service...
+user-service          | 2025-12-09T10:31:10.338Z  INFO 1 --- [USER-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+user-service          | 2025-12-09T10:31:10.340Z  INFO 1 --- [USER-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+user-service          | 2025-12-09T10:31:10.360Z  INFO 1 --- [USER-SERVICE] [           main] com.user.UserServiceApplication          : Started UserServiceApplication in 30.421 seconds (process running for 35.237)
+booking-service       | 2025-12-09T10:31:10.493Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+booking-service       | 2025-12-09T10:31:10.497Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+booking-service       | 2025-12-09T10:31:10.502Z  INFO 1 --- [booking-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+booking-service       | 2025-12-09T10:31:10.506Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765276270505 with initial instances count: 0
+booking-service       | 2025-12-09T10:31:10.513Z  INFO 1 --- [booking-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING-SERVICE with eureka with status UP
+booking-service       | 2025-12-09T10:31:10.515Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765276270515, current=UP, previous=STARTING]
+booking-service       | 2025-12-09T10:31:10.518Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/40574cef478c:booking-service:8082: registering service...
+booking-service       | 2025-12-09T10:31:10.648Z  INFO 1 --- [booking-service] [           main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8082 (http)
+booking-service       | 2025-12-09T10:31:10.651Z  INFO 1 --- [booking-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+eureka-server         | 2025-12-09T10:31:10.658Z  INFO 1 --- [eureka-server] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKING-SERVICE/40574cef478c:booking-service:8082 with status UP (replication=false)
+eureka-server         | 2025-12-09T10:31:10.658Z  INFO 1 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/4f61099409b9:USER-SERVICE:8084 with status UP (replication=false)
+booking-service       | 2025-12-09T10:31:10.676Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/40574cef478c:booking-service:8082 - registration status: 204
+user-service          | 2025-12-09T10:31:10.676Z  INFO 1 --- [USER-SERVICE] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/4f61099409b9:USER-SERVICE:8084 - registration status: 204
+booking-service       | 2025-12-09T10:31:10.681Z  INFO 1 --- [booking-service] [           main] com.booking.BookingServiceApplication    : Started BookingServiceApplication in 29.826 seconds (process running for 35.459)
+eureka-server         | 2025-12-09T10:31:11.385Z  INFO 1 --- [eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKING-SERVICE/40574cef478c:booking-service:8082 with status UP (replication=true)
+eureka-server         | 2025-12-09T10:31:11.387Z  INFO 1 --- [eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/4f61099409b9:USER-SERVICE:8084 with status UP (replication=true)
+rabbitmq              | 2025-12-09 10:31:12.156610+00:00 [info] <0.770.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq              | 2025-12-09 10:31:12.156832+00:00 [info] <0.800.0> Statistics database started.[0m
+rabbitmq              | 2025-12-09 10:31:12.156958+00:00 [info] <0.799.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq              | 2025-12-09 10:31:12.172280+00:00 [info] <0.818.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq              | 2025-12-09 10:31:12.172629+00:00 [info] <0.704.0> Ready to start client connection listeners[0m
+rabbitmq              | 2025-12-09 10:31:12.176895+00:00 [info] <0.862.0> started TCP listener on [::]:5672[0m
+rabbitmq              |  completed with 5 plugins.
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0> Server startup complete; 5 plugins started.[0m
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0>  * rabbitmq_prometheus[0m
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0>  * rabbitmq_federation[0m
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0>  * rabbitmq_management[0m
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0>  * rabbitmq_management_agent[0m
+rabbitmq              | 2025-12-09 10:31:12.423795+00:00 [info] <0.704.0>  * rabbitmq_web_dispatch[0m
+rabbitmq              | 2025-12-09 10:31:12.426145+00:00 [info] <0.9.0> Time to start RabbitMQ: 37469 ms[0m
+Gracefully Stopping... press Ctrl+C again to force
+[K Container notification-service  [32mStopping[0m
+[K Container booking-service  [32mStopping[0m
+[K Container api-gateway  [32mStopping[0m
+[K Container user-service  [32mStopping[0m
+[K Container flight-service  [32mStopping[0m
+[K Container notification-service  [32mStopped[0m
+[K Container user-service  [32mStopped[0m
+[K Container booking-service  [32mStopped[0m
+[K Container rabbitmq  [32mStopping[0m
+[K Container api-gateway  [32mStopped[0m
+[K Container flight-service  [32mStopped[0m
+[K Container config-server  [32mStopping[0m
+[K Container config-server  [32mStopped[0m
+[K Container eureka-server  [32mStopping[0m
+[K Container eureka-server  [32mStopped[0m
+[K Container rabbitmq  [32mStopped[0m
