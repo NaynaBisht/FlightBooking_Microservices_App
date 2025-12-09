@@ -1,11 +1,129 @@
+# version: '3.8'
+# services:
+#   rabbitmq:
+#     image: rabbitmq:3-management
+#     container_name: rabbitmq
+#     ports:
+#       - "5672:5672" 
+#       - "15672:15672"
+#     environment:
+#       RABBITMQ_DEFAULT_USER: guest
+#       RABBITMQ_DEFAULT_PASS: guest
+
+
 version: '3.8'
+
 services:
+
+  # -------------------------
+  # RABBITMQ SERVICE
+  # -------------------------
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"   # The port your Java Code connects to
-      - "15672:15672" # The port for the Web Dashboard (GUI)
+      - "5672:5672"       # Java connects to this
+      - "15672:15672"     # RabbitMQ dashboard
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+
+  # -------------------------
+  # EUREKA SERVER
+  # -------------------------
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - EUREKA_SERVER_PORT=8761
+
+  # -------------------------
+  # CONFIG SERVER
+  # -------------------------
+  config-server:
+    build: ./config-server
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+
+  # -------------------------
+  # API GATEWAY
+  # -------------------------
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8765:8765"
+    depends_on:
+      - eureka-server
+      - config-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+
+  # -------------------------
+  # USER SERVICE
+  # -------------------------
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    ports:
+      - "8004:8004"
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq    # <-- IMPORTANT: User-service sends messages sometimes
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  # -------------------------
+  # FLIGHT SERVICE
+  # -------------------------
+  flight-service:
+    build: ./flight-service
+    container_name: flight-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+      - config-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+
+  # -------------------------
+  # BOOKING SERVICE
+  # -------------------------
+  booking-service:
+    build: ./booking-service
+    container_name: booking-service
+    ports:
+      - "8002:8002"
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq    # <-- IMPORTANT: Booking usually triggers notification
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  # -------------------------
+  # NOTIFICATION SERVICE
+  # -------------------------
+  notification-service:
+    build: ./notification-service
+    container_name: notification-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+      - config-server
+      - rabbitmq
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
