@@ -4,45 +4,44 @@ server:
 spring:
   application:
     name: API-GATEWAY
-  
-  # --- CONNECT TO CONFIG SERVER ---
-  config:
-    import: "optional:configserver:http://localhost:8888"
 
-  # --- COMMENTED OUT (Moved to Config Server Repo) ---
-  # cloud:
-  #   gateway:
-  #     discovery:
-  #       locator:
-  #         enabled: true
-  #         lower-case-service-id: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
-# eureka:
-#   instance:
-#     prefer-ip-address: true
-#     hostname: localhost
-#   client:
-#     register-with-eureka: true
-#     fetch-registry: true
-#     service-url:
-#       defaultZone: http://localhost:8761/eureka/
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
-# resilience4j:
-#   circuitbreaker:
-#     instances:
-#       flightCircuitBreaker:
-#         slidingWindowSize: 10
-#         failureRateThreshold: 50
-#         waitDurationInOpenState: 10000
-#         permittedNumberOfCallsInHalfOpenState: 3
-#       bookingCircuitBreaker:
-#         slidingWindowSize: 10
-#         failureRateThreshold: 50
-#         waitDurationInOpenState: 10000
-#         permittedNumberOfCallsInHalfOpenState: 3
-#   timelimiter:
-#     instances:
-#       flightCircuitBreaker:
-#         timeoutDuration: 2s
-#       bookingCircuitBreaker:
-#         timeoutDuration: 2s
+resilience4j:
+  circuitbreaker:
+    instances:
+      flightCircuitBreaker:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+
+      bookingCircuitBreaker:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+
+  timelimiter:
+    instances:
+      flightCircuitBreaker:
+        timeoutDuration: 5s
+      bookingCircuitBreaker:
+        timeoutDuration: 5s
+
+jwtSecret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
+jwtExpirationMs: 86400000
