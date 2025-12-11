@@ -1,13 +1,11 @@
 package com.booking.service;
 
 import java.time.LocalDateTime;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.booking.client.FlightClient;
@@ -38,69 +36,77 @@ public class BookingService {
 	private final FlightClient flightClient;
 	private final BookingRepository bookingRepository;
 	private final PnrGeneratorService pnrGeneratorService;
-
 	private final RabbitTemplate rabbitTemplate;
 
 	public Mono<BookingResponse> bookFlight(String flightNumber, BookingRequest request) {
 
-		return flightClient.findByFlightNumber(flightNumber)
-				.switchIfEmpty(
-						Mono.error(new ResourceNotFoundException("Flight not found for number: " + flightNumber)))
-				.flatMap(flight -> {
+		return bookingRepository.findByFlightNumberAndEmailId(flightNumber, request.getEmailId())
+				.flatMap(existing -> Mono.error(new BadRequestException("You have already booked this flight")))
 
-					log.debug("Fetched flight details: {}", flight);
+				.then(
 
-					if (flight.getAvailableSeats() < request.getNumberOfSeats()) {
-						throw new SeatUnavailableException("Insufficient seat availability");
-					}
+						flightClient.findByFlightNumber(flightNumber)
+								.switchIfEmpty(Mono.error(
+										new ResourceNotFoundException("Flight not found for number: " + flightNumber)))
+								.flatMap(flight -> {
 
-					if (!request.getNumberOfSeats().equals(request.getPassengers().size())) {
-						throw new BadRequestException("Passenger count must match number of seats booked");
-					}
+									log.debug("Fetched flight details: {}", flight);
 
-					float price = flight.getPrice();
-					float tax = price * 0.18f;
-					float totalPrice = (price + tax) * request.getNumberOfSeats();
+									if (flight.getAvailableSeats() < request.getNumberOfSeats()) {
+										throw new SeatUnavailableException("Insufficient seat availability");
+									}
 
-					Booking booking = new Booking();
-					booking.setFlightNumber(flightNumber);
-					booking.setPnr(pnrGeneratorService.generatePnr());
-					booking.setEmailId(request.getEmailId());
-					booking.setContactNumber(request.getContactNumber());
-					booking.setBookingTimestamp(LocalDateTime.now());
-					booking.setNumberOfSeats(request.getNumberOfSeats());
-					booking.setPrice(price);
-					booking.setTotalPrice(totalPrice);
-					booking.setPassengers(
-							request.getPassengers().stream().map(this::toPassenger).collect(Collectors.toList()));
-					booking.setStatus("BOOKED");
+									if (!request.getNumberOfSeats().equals(request.getPassengers().size())) {
+										throw new BadRequestException(
+												"Passenger count must match number of seats booked");
+									}
 
-					flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
+									float price = flight.getPrice();
+									float tax = price * 0.18f;
+									float totalPrice = (price + tax) * request.getNumberOfSeats();
 
-					return bookingRepository.save(booking).doOnSuccess(savedBooking -> {
-						try {
-							Map<String, Object> emailMessage = new HashMap<>();
-							emailMessage.put("pnr", savedBooking.getPnr());
-							emailMessage.put("emailId", savedBooking.getEmailId());
-							emailMessage.put("flightNumber", savedBooking.getFlightNumber());
-							emailMessage.put("totalPrice", savedBooking.getTotalPrice());
+									Booking booking = new Booking();
+									booking.setFlightNumber(flightNumber);
+									booking.setPnr(pnrGeneratorService.generatePnr());
+									booking.setEmailId(request.getEmailId());
+									booking.setContactNumber(request.getContactNumber());
+									booking.setBookingTimestamp(LocalDateTime.now());
+									booking.setNumberOfSeats(request.getNumberOfSeats());
+									booking.setPrice(price);
+									booking.setTotalPrice(totalPrice);
+									booking.setPassengers(request.getPassengers().stream().map(this::toPassenger)
+											.collect(Collectors.toList()));
+									booking.setStatus("BOOKED");
 
-							String name = "Valued Customer";
-							if (savedBooking.getPassengers() != null && !savedBooking.getPassengers().isEmpty()) {
-								name = savedBooking.getPassengers().get(0).getPassengerName();
-							}
-							emailMessage.put("passengerName", name);
+									flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
 
-							rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, RabbitMQConfig.ROUTING_KEY,
-									emailMessage);
-							log.info("Message sent to Queue for PNR: {}", savedBooking.getPnr());
+									return bookingRepository.save(booking).doOnSuccess(savedBooking -> {
+										try {
+											Map<String, Object> emailMessage = new HashMap<>();
+											emailMessage.put("pnr", savedBooking.getPnr());
+											emailMessage.put("emailId", savedBooking.getEmailId());
+											emailMessage.put("flightNumber", savedBooking.getFlightNumber());
+											emailMessage.put("totalPrice", savedBooking.getTotalPrice());
 
-						} catch (Exception e) {
-							log.error("Failed to send RabbitMQ message", e);
-						}
-					}).map(saved -> new BookingResponse(saved.getPnr(), saved.getTotalPrice(), "Booking successful",
-							saved.getEmailId(), saved.getPassengers().get(0).getPassengerName(), flightNumber));
-				});
+											String name = "Valued Customer";
+											if (savedBooking.getPassengers() != null
+													&& !savedBooking.getPassengers().isEmpty()) {
+												name = savedBooking.getPassengers().get(0).getPassengerName();
+											}
+											emailMessage.put("passengerName", name);
+
+											rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE,
+													RabbitMQConfig.ROUTING_KEY, emailMessage);
+
+											log.info("Message sent to Queue for PNR: {}", savedBooking.getPnr());
+
+										} catch (Exception e) {
+											log.error("Failed to send RabbitMQ message", e);
+										}
+									}).map(saved -> new BookingResponse(saved.getPnr(), saved.getTotalPrice(),
+											"Booking successful", saved.getEmailId(),
+											saved.getPassengers().get(0).getPassengerName(), flightNumber));
+								}));
 	}
 
 	private Passenger toPassenger(PassengerRequest req) {

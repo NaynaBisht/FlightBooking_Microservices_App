@@ -1,6 +1,7 @@
 package com.flight.service;
 
 import java.time.LocalDateTime;
+import com.common.dto.BadRequestException;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class AirlineService {
 		BeanUtils.copyProperties(request, flight);
 		flight.setAvailableSeats(request.getTotalSeats());
 
-		return flightRepository.save(flight).doOnSuccess(f -> log.info("Flight added: {}", f.getFlightNumber()));
+		return flightRepository.findByFlightNumber(request.getFlightNumber()).hasElement().flatMap(exists -> {
+			if (exists) {
+				return Mono.error(new BadRequestException("Flight already exists with this flight number"));
+			}
+			return flightRepository.save(flight);
+		}).doOnSuccess(f -> log.info("Flight added: {}", f.getFlightNumber()));
+
 	}
+
 }

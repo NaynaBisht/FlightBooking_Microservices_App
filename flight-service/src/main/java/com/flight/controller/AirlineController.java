@@ -29,6 +29,7 @@ public class AirlineController {
 		log.info("Adding flight: {}", request.getFlightNumber());
 
 		return airlineService.addFlight(request)
-				.map(savedFlight -> ResponseEntity.status(HttpStatus.CREATED).body(savedFlight));
+				.flatMap(savedFlight ->
+                Mono.just(ResponseEntity.status(HttpStatus.CREATED).body(savedFlight)));
 	}
 }

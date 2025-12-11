@@ -3,6 +3,7 @@ package com.flight.entity;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.validation.constraints.Min;
@@ -19,6 +20,7 @@ public class Flight {
 	private String id;
 
 	@NotBlank
+	@Indexed(unique = true)
 	private String flightNumber;
 
 	@NotBlank
