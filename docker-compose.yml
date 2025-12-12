@@ -1,36 +1,25 @@
-# version: '3.8'
-# services:
-#   rabbitmq:
-#     image: rabbitmq:3-management
-#     container_name: rabbitmq
-#     ports:
-#       - "5672:5672" 
-#       - "15672:15672"
-#     environment:
-#       RABBITMQ_DEFAULT_USER: guest
-#       RABBITMQ_DEFAULT_PASS: guest
-
-
 version: '3.8'
 
 services:
 
-  # -------------------------
-  # RABBITMQ SERVICE
-  # -------------------------
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"       # Java connects to this
-      - "15672:15672"     # RabbitMQ dashboard
+      - "5672:5672"
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
 
-  # -------------------------
-  # EUREKA SERVER
-  # -------------------------
   eureka-server:
     build: ./eureka-server
     container_name: eureka-server
@@ -39,9 +28,6 @@ services:
     environment:
       - EUREKA_SERVER_PORT=8761
 
-  # -------------------------
-  # CONFIG SERVER
-  # -------------------------
   config-server:
     build: ./config-server
     container_name: config-server
@@ -52,9 +38,6 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
 
-  # -------------------------
-  # API GATEWAY
-  # -------------------------
   api-gateway:
     build: ./api-gateway
     container_name: api-gateway
@@ -65,26 +48,29 @@ services:
       - config-server
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - SPRING_CLOUD_GATEWAY_DISCOVERY_LOCATOR_FILTERS_0=StripPrefix=1
 
-  # -------------------------
-  # USER SERVICE
-  # -------------------------
   user-service:
     build: ./user-service
     container_name: user-service
     ports:
-      - "8004:8004"
+      - "8084:8084"
     depends_on:
       - eureka-server
       - config-server
-      - rabbitmq    # <-- IMPORTANT: User-service sends messages sometimes
+      - rabbitmq
+      - mongo
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
       - SPRING_RABBITMQ_HOST=rabbitmq
+      # FORCE OVERRIDE: Broken down into specific host/port variables
+      - SPRING_DATA_MONGODB_HOST=mongo
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=flight_user_db
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+    entrypoint: ["java", "-Dspring.data.mongodb.uri=mongodb://mongo:27017/flight_user_db", "-jar", "/app/app.jar"]
 
-  # -------------------------
-  # FLIGHT SERVICE
-  # -------------------------
   flight-service:
     build: ./flight-service
     container_name: flight-service
@@ -93,28 +79,36 @@ services:
     depends_on:
       - eureka-server
       - config-server
+      - mongo
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      # FORCE OVERRIDE: Broken down into specific host/port variables
+      - SPRING_DATA_MONGODB_HOST=mongo
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=flightdb
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+    entrypoint: ["java", "-Dspring.data.mongodb.uri=mongodb://mongo:27017/flightdb", "-jar", "/app/app.jar"]
 
-  # -------------------------
-  # BOOKING SERVICE
-  # -------------------------
   booking-service:
     build: ./booking-service
     container_name: booking-service
     ports:
-      - "8002:8002"
+      - "8082:8082"
     depends_on:
       - eureka-server
       - config-server
-      - rabbitmq    # <-- IMPORTANT: Booking usually triggers notification
+      - rabbitmq
+      - mongo
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
       - SPRING_RABBITMQ_HOST=rabbitmq
+      # FORCE OVERRIDE: Broken down into specific host/port variables
+      - SPRING_DATA_MONGODB_HOST=mongo
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=bookingdb
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+    entrypoint: ["java", "-Dspring.data.mongodb.uri=mongodb://mongo:27017/bookingdb", "-jar", "/app/app.jar"]
 
-  # -------------------------
-  # NOTIFICATION SERVICE
-  # -------------------------
   notification-service:
     build: ./notification-service
     container_name: notification-service
@@ -127,3 +121,7 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
       - SPRING_RABBITMQ_HOST=rabbitmq
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+
+volumes:
+  mongo_data:

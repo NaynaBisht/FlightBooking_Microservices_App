@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: API-GATEWAY
+    name: api-gateway
 
   cloud:
     gateway:
@@ -11,6 +11,8 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+          filters:
+            - StripPrefix=1
 
 eureka:
   instance:
@@ -19,7 +21,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
 
 resilience4j:
   circuitbreaker:
@@ -42,6 +44,7 @@ resilience4j:
         timeoutDuration: 5s
       bookingCircuitBreaker:
         timeoutDuration: 5s
+
 management:
   endpoints:
     web:
@@ -50,5 +53,6 @@ management:
   endpoint:
     gateway:
       enabled: true
+
 jwtSecret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
 jwtExpirationMs: 86400000
