@@ -20,7 +20,7 @@ import com.user.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableMethodSecurity
-@EnableWebSecurity // Added this just to be safe
+@EnableWebSecurity
 public class WebSecurityConfig {
   
   @Autowired

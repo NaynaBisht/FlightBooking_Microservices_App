@@ -1,6 +1,7 @@
 package com.user.controller;
 
 import java.util.HashSet;
+
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -25,7 +26,7 @@ import com.user.models.Role;
 import com.user.models.User;
 import com.user.payload.request.LoginRequest;
 import com.user.payload.request.SignupRequest;
-import com.user.payload.response.JwtResponse; // We will create this small class next
+import com.user.payload.response.JwtResponse;
 import com.user.payload.response.MessageResponse;
 import com.user.repository.RoleRepository;
 import com.user.repository.UserRepository;

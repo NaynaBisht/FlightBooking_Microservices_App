@@ -54,8 +54,6 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     filterChain.doFilter(request, response);
   }
 
-  // --- CRITICAL CHANGE HERE ---
-  // Changed from reading Cookies to reading "Authorization: Bearer ..." header
   private String parseJwt(HttpServletRequest request) {
     String headerAuth = request.getHeader("Authorization");
 
