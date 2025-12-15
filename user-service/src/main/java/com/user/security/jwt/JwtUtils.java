@@ -2,6 +2,8 @@ package com.user.security.jwt;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,15 +20,24 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtils {
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-	@Value("${flightapp.app.jwtSecret}") 
-	  private String jwtSecret;
+	@Value("${flightapp.app.jwtSecret}")
+	private String jwtSecret;
 
-	  @Value("${flightapp.app.jwtExpirationMs}")
-	  private int jwtExpirationMs;
+	@Value("${flightapp.app.jwtExpirationMs}")
+	private int jwtExpirationMs;
 
+	// Adds Roles to the Token
 	public String generateJwtToken(Authentication authentication) {
 		UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-		return generateTokenFromUsername(userPrincipal.getUsername());
+
+		// 1. Capture the roles from the authenticated user
+		List<String> roles = userPrincipal.getAuthorities().stream().map(item -> item.getAuthority())
+				.collect(Collectors.toList());
+
+		// 2. Add "roles" claim to the token payload
+		return Jwts.builder().setSubject(userPrincipal.getUsername()).claim("roles", roles).setIssuedAt(new Date())
+				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
+				.signWith(key(), SignatureAlgorithm.HS256).compact();
 	}
 
 	public String generateTokenFromUsername(String username) {

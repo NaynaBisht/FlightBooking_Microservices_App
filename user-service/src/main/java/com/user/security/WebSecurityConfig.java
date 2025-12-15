@@ -64,6 +64,7 @@ public class WebSecurityConfig {
           auth.requestMatchers("/api/auth/**").permitAll()
               // Allow the test controller without token (partially)
               .requestMatchers("/api/test/**").permitAll()
+              .requestMatchers("/error").permitAll()
               // EVERYTHING else needs a token
               .anyRequest().authenticated()
         );
