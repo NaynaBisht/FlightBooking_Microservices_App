@@ -17,39 +17,40 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class User {
-  @Id
-  private String id;
+	@Id
+	private String id;
 
-  @NotBlank
-  @Size(max = 20)
-  private String username;
+	@NotBlank
+	@Size(max = 20)
+	private String username;
 
-  @NotBlank
-  @Size(max = 50)
-  @Email
-  private String email;
-  
-  @NotBlank
-  private String firstName;
-  
-  @NotBlank
-  private String lastName;
-  
-  private String mobileNumber;
+	@NotBlank
+	@Size(max = 50)
+	@Email
+	private String email;
 
-  @NotBlank
-  @Size(max = 120)
-  private String password;
+	@NotBlank
+	private String firstName;
 
-  @DBRef
-  private Set<Role> roles = new HashSet<>();
+	@NotBlank
+	private String lastName;
 
-  public User(String username, String email, String password, String firstName, String lastName, String mobileNumber) {
-    this.username = username;
-    this.email = email;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.mobileNumber = mobileNumber;
-  }
+	private String mobileNumber;
+
+	@NotBlank
+	@Size(max = 120)
+	private String password;
+
+	@DBRef
+	private Set<Role> roles = new HashSet<>();
+
+	public User(String username, String email, String password, String firstName, String lastName,
+			String mobileNumber) {
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobileNumber = mobileNumber;
+	}
 }

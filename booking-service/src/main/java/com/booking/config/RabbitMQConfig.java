@@ -24,7 +24,7 @@ public class RabbitMQConfig {
 
 	@Bean
 	public Binding binding(Queue emailQueue, TopicExchange emailExchange) {
-	    return BindingBuilder.bind(emailQueue).to(emailExchange).with(ROUTING_KEY);
+		return BindingBuilder.bind(emailQueue).to(emailExchange).with(ROUTING_KEY);
 	}
 
 	@Bean

@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MongoConfig {
 
-    @Value("${spring.data.mongodb.uri}")
-    private String mongoUri;
+	@Value("${spring.data.mongodb.uri}")
+	private String mongoUri;
 
-    @Bean
-    public MongoClient mongoClient() {
-        // Explicitly forcing the connection for booking-service
-        System.out.println("BOOKING-SERVICE: Forcing MongoDB connection to: " + mongoUri);
-        return MongoClients.create(mongoUri);
-    }
+	@Bean
+	public MongoClient mongoClient() {
+		// Explicitly forcing the connection for booking-service
+		System.out.println("BOOKING-SERVICE: Forcing MongoDB connection to: " + mongoUri);
+		return MongoClients.create(mongoUri);
+	}
 }

@@ -34,13 +34,13 @@ public class FlightSearchController {
 				.switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND)
 						.body(new FlightSearchResponse(0, List.of(), "No flights found for selected date and route"))));
 	}
+
 	@GetMapping("/{flightNumber}")
-    public Mono<ResponseEntity<Flight>> getFlightByNumber(@PathVariable String flightNumber) {
-        log.info("Fetching details for flight number: {}", flightNumber);
-        
-        return flightService.getFlightByNumber(flightNumber)
-        		.map(ResponseEntity::ok)
-                .switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
-    }
+	public Mono<ResponseEntity<Flight>> getFlightByNumber(@PathVariable String flightNumber) {
+		log.info("Fetching details for flight number: {}", flightNumber);
+
+		return flightService.getFlightByNumber(flightNumber).map(ResponseEntity::ok)
+				.switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
+	}
 
 }

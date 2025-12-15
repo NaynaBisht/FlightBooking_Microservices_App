@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MongoConfig {
 
-    @Value("${spring.data.mongodb.uri}")
-    private String mongoUri;
+	@Value("${spring.data.mongodb.uri}")
+	private String mongoUri;
 
-    @Bean
-    public MongoClient mongoClient() {
-        System.out.println("USER-SERVICE (Blocking): Forcing MongoDB connection to: " + mongoUri);
-        return MongoClients.create(mongoUri);
-    }
+	@Bean
+	public MongoClient mongoClient() {
+		System.out.println("USER-SERVICE (Blocking): Forcing MongoDB connection to: " + mongoUri);
+		return MongoClients.create(mongoUri);
+	}
 }
