@@ -1,0 +1,182 @@
+<div
+  class="min-h-screen flex items-center justify-center px-4"
+  style="background-color:#D5B0AC;"
+>
+  <div class="w-full max-w-md">
+
+    <form
+      class="bg-white rounded-2xl shadow-xl px-8 py-10"
+      [formGroup]="form"
+      (ngSubmit)="register()"
+    >
+
+      <h2
+        class="text-2xl font-semibold text-center mb-6"
+        style="color:#402E2A;"
+      >
+        Create Account
+      </h2>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          First Name
+        </label>
+        <input
+          type="text"
+          formControlName="firstName"
+          placeholder="Enter first name"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('firstName')?.touched && form.get('firstName')?.invalid"
+          style="color:#402E2A;"
+        >
+          First name is required
+        </small>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Last Name
+        </label>
+        <input
+          type="text"
+          formControlName="lastName"
+          placeholder="Enter last name"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('lastName')?.touched && form.get('lastName')?.invalid"
+          style="color:#402E2A;"
+        >
+          Last name is required
+        </small>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Mobile Number
+        </label>
+        <input
+          type="text"
+          formControlName="mobileNumber"
+          placeholder="Enter mobile number"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('mobileNumber')?.touched && form.get('mobileNumber')?.invalid"
+          style="color:#402E2A;"
+        >
+          Mobile number is required
+        </small>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Username
+        </label>
+        <input
+          type="text"
+          formControlName="username"
+          placeholder="Choose a username"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('username')?.touched && form.get('username')?.invalid"
+          style="color:#402E2A;"
+        >
+          Username is required
+        </small>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Email
+        </label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Enter your email"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('email')?.touched && form.get('email')?.invalid"
+          style="color:#402E2A;"
+        >
+          Enter a valid email
+        </small>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Password
+        </label>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Create a password"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        />
+        <small
+          *ngIf="form.get('password')?.touched && form.get('password')?.invalid"
+          style="color:#402E2A;"
+        >
+          Password must be at least 6 characters
+        </small>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-1" style="color:#684551;">
+          Role
+        </label>
+        <select
+          formControlName="role"
+          class="w-full px-4 py-2 rounded-lg border focus:outline-none transition"
+          style="border-color:#CEA0AE; color:#402E2A;"
+        >
+          <option value="">Select role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <small
+          *ngIf="form.get('role')?.touched && form.get('role')?.invalid"
+          style="color:#402E2A;"
+        >
+          Role is required
+        </small>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        class="w-full py-2 rounded-lg text-white font-medium transition-all"
+        style="background-color:#684551;"
+        onmouseover="this.style.backgroundColor='#402E2A'"
+        onmouseout="this.style.backgroundColor='#684551'"
+      >
+        Register
+      </button>
+
+      <p class="text-center text-sm mt-6" style="color:#684551;">
+        Already have an account?
+        <a
+          routerLink="/login"
+          class="font-medium transition"
+          style="color:#402E2A;"
+          onmouseover="this.style.textDecoration='underline'"
+          onmouseout="this.style.textDecoration='none'"
+        >
+          Login here
+        </a>
+      </p>
+
+    </form>
+
+  </div>
+</div>
