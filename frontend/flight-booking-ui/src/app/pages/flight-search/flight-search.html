@@ -1,0 +1,110 @@
+<div class="min-h-screen px-6 py-10" style="background-color: #d5b0ac">
+  <!-- Page Title -->
+  <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #402e2a">Search Flights</h2>
+
+  <!-- Search Card -->
+  <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <!-- From -->
+      <div>
+        <label class="block text-sm font-medium mb-1" style="color: #684551"> From </label>
+        <input
+          class="w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 transition"
+          placeholder="HYD"
+          [(ngModel)]="from"
+          style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
+        />
+      </div>
+
+      <!-- To -->
+      <div>
+        <label class="block text-sm font-medium mb-1" style="color: #684551"> To </label>
+        <input
+          class="w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 transition"
+          placeholder="BLR"
+          [(ngModel)]="to"
+          style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
+        />
+      </div>
+
+      <!-- Date -->
+      <div>
+        <label class="block text-sm font-medium mb-1" style="color: #684551">
+          Departure Date
+        </label>
+        <input
+          type="date"
+          class="w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 transition"
+          [(ngModel)]="date"
+          style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
+        />
+      </div>
+
+      <!-- Adults -->
+      <div>
+        <label class="block text-sm font-medium mb-1" style="color: #684551"> Adults </label>
+        <input
+          type="number"
+          min="1"
+          class="w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 transition"
+          [(ngModel)]="adults"
+          style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
+        />
+      </div>
+
+      <!-- Children -->
+      <div>
+        <label class="block text-sm font-medium mb-1" style="color: #684551"> Children </label>
+        <input
+          type="number"
+          min="0"
+          class="w-full px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 transition"
+          [(ngModel)]="children"
+          style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
+        />
+      </div>
+    </div>
+
+    <!-- Search Button -->
+    <div class="mt-6 text-center">
+      <button
+        class="px-8 py-2.5 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg"
+        style="background-color: #684551"
+        onmouseover="this.style.backgroundColor='#402E2A'"
+        onmouseout="this.style.backgroundColor='#684551'"
+        (click)="search()"
+      >
+        Search Flights
+      </button>
+    </div>
+  </div>
+  
+  <!-- Results Wrapper -->
+  <div
+    *ngIf="flights.length > 0"
+    class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden"
+  >
+    <!-- Header -->
+    <div class="px-6 py-3 font-semibold" style="background-color: #402E2A; color: white">
+      Available Flights
+    </div>
+
+    <!-- Flight Rows -->
+    <div
+      *ngFor="let f of flights; let last = last"
+      class="flex justify-between items-center px-6 py-4"
+      [ngStyle]="{
+        'border-bottom': last ? 'none' : '1px solid #D5B0AC'
+      }"
+    >
+      <!-- Left -->
+      <div>
+        <div class="font-semibold" style="color: #402e2a">{{ f.flightNo }}</div>
+        <div class="text-sm" style="color: #684551">{{ f.departure }} → {{ f.arrival }}</div>
+      </div>
+
+      <!-- Right -->
+      <div class="font-semibold text-lg" style="color: #684551">₹{{ f.price }}</div>
+    </div>
+  </div>
+</div>
