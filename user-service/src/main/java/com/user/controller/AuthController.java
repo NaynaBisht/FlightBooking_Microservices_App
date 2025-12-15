@@ -1,7 +1,6 @@
 package com.user.controller;
 
 import java.util.HashSet;
-
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -15,7 +14,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,10 +31,10 @@ import com.user.repository.UserRepository;
 import com.user.security.jwt.JwtUtils;
 import com.user.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+
 	@Autowired
 	AuthenticationManager authenticationManager;
 
@@ -72,36 +70,42 @@ public class AuthController {
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+		// 1. Check duplicates
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
 		}
-
 		if (userRepository.existsByEmail(signUpRequest.getEmail())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is already in use!"));
 		}
 
-		User user = new User(signUpRequest.getUsername(), signUpRequest.getEmail(),
-				encoder.encode(signUpRequest.getPassword()), signUpRequest.getFirstName(), signUpRequest.getLastName(),
-				signUpRequest.getMobileNumber());
+		// 2. Create User
+		User user = new User();
+		user.setUsername(signUpRequest.getUsername());
+		user.setEmail(signUpRequest.getEmail());
+		user.setPassword(encoder.encode(signUpRequest.getPassword()));
+
+		user.setFirstName(signUpRequest.getFirstName() != null ? signUpRequest.getFirstName() : "Unknown");
+		user.setLastName(signUpRequest.getLastName() != null ? signUpRequest.getLastName() : "User");
+		user.setMobileNumber(signUpRequest.getMobileNumber());
 
 		Set<String> strRoles = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
 
 		if (strRoles == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+					.orElseGet(() -> roleRepository.save(new Role(ERole.ROLE_USER)));
 			roles.add(userRole);
 		} else {
 			strRoles.forEach(role -> {
 				switch (role) {
 				case "admin":
 					Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
-							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+							.orElseGet(() -> roleRepository.save(new Role(ERole.ROLE_ADMIN)));
 					roles.add(adminRole);
 					break;
 				default:
 					Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+							.orElseGet(() -> roleRepository.save(new Role(ERole.ROLE_USER)));
 					roles.add(userRole);
 				}
 			});
