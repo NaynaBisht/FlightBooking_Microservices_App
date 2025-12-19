@@ -3,6 +3,8 @@ import { LoginComponent } from './pages/login/login';
 import { RegisterComponent } from './pages/register/register';
 import { FlightSearchComponent } from './pages/flight-search/flight-search';
 import { authGuard } from './guards/auth.guard';
+import { BookingComponent } from './pages/booking/booking';
+import { MyBookingsComponent } from './pages/profile/profile';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -11,4 +13,8 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
 
   { path: 'flights', component: FlightSearchComponent },
+
+  { path: 'booking', component: BookingComponent },
+
+  { path: 'profile', component: MyBookingsComponent }
 ];

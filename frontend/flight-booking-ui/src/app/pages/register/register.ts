@@ -40,12 +40,12 @@ export class RegisterComponent {
 
     this.authService.register(payload).subscribe({
       next: () => {
-        alert('Registration successful');
+        // alert('Registration successful');
         this.router.navigate(['/login']);
       },
       error: (err: any) => {
         console.error('Error Response:', err);
-        alert(err.error?.message || 'Registration failed');
+        // alert(err.error?.message || 'Registration failed');
       },
     });
   }

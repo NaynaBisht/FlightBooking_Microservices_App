@@ -1,0 +1,189 @@
+<div
+  class="min-h-screen flex flex-col items-center justify-start p-6 relative overflow-hidden"
+  style="background-color: #f1eae9"
+>
+  <div class="w-full max-w-4xl z-10 mt-8">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold" style="color: #402e2a">Confirm Your Flight</h1>
+    </div>
+
+    <div
+      *ngIf="flight"
+      class="w-full mb-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm px-8 py-4 flex flex-wrap items-center justify-between border-l-8"
+      style="border-color: #cea0ae"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="h-10 w-10 rounded-full flex items-center justify-center text-xl"
+          style="background-color: #f1eae9; color: #402e2a"
+        >
+          ✈
+        </div>
+        <div>
+          <p
+            class="text-[10px] uppercase font-bold tracking-widest opacity-60"
+            style="color: #684551"
+          >
+            Flight
+          </p>
+          <p class="font-bold" style="color: #402e2a">
+            {{ flight.airlineName }}
+            <span class="font-normal opacity-70">({{ flight.flightNumber }})</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="px-6 border-x border-gray-200 hidden md:block">
+        <p
+          class="text-[10px] uppercase font-bold tracking-widest opacity-60 text-center"
+          style="color: #684551"
+        >
+          Route
+        </p>
+        <p class="font-bold" style="color: #402e2a">
+          {{ flight.departingAirport }} → {{ flight.arrivalAirport }}
+        </p>
+      </div>
+
+      <div class="text-right">
+        <p
+          class="text-[10px] uppercase font-bold tracking-widest opacity-60"
+          style="color: #684551"
+        >
+          Amount to Pay
+        </p>
+        <p class="text-xl font-black" style="color: #684551">Rs. {{ flight.price }}</p>
+        <span class="text-[10px] mt-1 font-bold px-2 py-0.5 rounded-full bg-[#cea0ae] text-white">
+          {{ bookingForm.get('numberOfSeats')?.value }} Seat(s)
+        </span>
+      </div>
+    </div>
+
+    <div
+      class="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform transition-all"
+    >
+      <form
+        *ngIf="bookingForm"
+        [formGroup]="bookingForm"
+        (ngSubmit)="bookFlight()"
+        class="p-8 md:p-12"
+      >
+        <div class="mb-10">
+          <h2
+            class="text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center"
+            style="color: #684551"
+          >
+            <span class="mr-3 w-6 h-[1px] bg-current opacity-30"></span> Contact Information
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="group">
+              <input
+                type="email"
+                formControlName="emailId"
+                placeholder="Email Address"
+                class="w-full px-5 py-3 rounded-xl border-2 bg-transparent focus:outline-none transition-all"
+                style="border-color: #cea0ae; color: #402e2a"
+              />
+            </div>
+            <div class="group">
+              <input
+                type="text"
+                formControlName="contactNumber"
+                placeholder="Mobile Number"
+                class="w-full px-5 py-3 rounded-xl border-2 bg-transparent focus:outline-none transition-all"
+                style="border-color: #cea0ae; color: #402e2a"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div formArrayName="passengers">
+          <h2
+            class="text-xs font-bold uppercase tracking-[0.2em] mb-6 flex items-center"
+            style="color: #684551"
+          >
+            <span class="mr-3 w-6 h-[1px] bg-current opacity-30"></span> Passenger Details
+          </h2>
+
+          <div
+            *ngFor="let p of passengers.controls; let i = index"
+            [formGroupName]="i"
+            class="mb-8 p-6 rounded-2xl border-2 border-dashed bg-gray-50/30 space-y-4"
+            style="border-color: #cea0ae"
+          >
+            <div class="flex justify-between items-center mb-2">
+              <span
+                class="text-[10px] font-black px-2 py-1 rounded bg-[#cea0ae] text-white uppercase"
+              >
+                Passenger {{ i + 1 }}
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="md:col-span-2">
+                <input
+                  formControlName="passengerName"
+                  placeholder="Full Name"
+                  class="w-full px-4 py-2.5 rounded-lg border bg-white focus:outline-none focus:ring-2 focus:ring-opacity-20"
+                  style="border-color: #cea0ae; --tw-ring-color: #684551"
+                />
+              </div>
+              <div>
+                <input
+                  type="number"
+                  formControlName="age"
+                  placeholder="Age"
+                  class="w-full px-4 py-2.5 rounded-lg border bg-white focus:outline-none"
+                  style="border-color: #cea0ae"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <select
+                formControlName="gender"
+                class="w-full px-4 py-2.5 rounded-lg border bg-white focus:outline-none appearance-none"
+                style="border-color: #cea0ae"
+              >
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+
+              <input
+                formControlName="seatNum"
+                placeholder="Seat (e.g. B14)"
+                class="w-full px-4 py-2.5 rounded-lg border bg-white focus:outline-none"
+                style="border-color: #cea0ae"
+              />
+
+              <select
+                formControlName="mealPref"
+                class="w-full px-4 py-2.5 rounded-lg border bg-white focus:outline-none appearance-none"
+                style="border-color: #cea0ae"
+              >
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <button
+            type="submit"
+            class="w-full py-4 rounded-xl text-white font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform active:scale-[0.98]"
+            style="background-color: #684551"
+          >
+            Complete Booking
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="py-8 w-full text-center mt-auto">
+    <p class="text-[10px] font-bold uppercase tracking-widest opacity-50" style="color: #402e2a">
+      Secure Checkout © 2025 Flight Booking App
+    </p>
+  </div>
+</div>
