@@ -45,7 +45,7 @@
               style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
             >
             <option value="" disabled selected> Select Origin </option>
-            <option *ngFor="let city of cities" [value]=""city > {{city}} </option>
+            <option *ngFor="let city of cities" [value]="city" > {{city}} </option>
           </select>
           </div>
         </div>
@@ -85,7 +85,7 @@
               style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
             >
             <option value="" disabled selected> Select Destination </option>
-            <option *ngFor="let city of cities" [value]=""city > {{city}} </option>
+            <option *ngFor="let city of cities" [value]="city" > {{city}} </option>
             </select>
           </div>
         </div>
@@ -143,6 +143,7 @@
             onmouseover="this.style.backgroundColor='#402E2A'"
             onmouseout="this.style.backgroundColor='#684551'"
             (click)="search()"
+            [disabled]=""
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

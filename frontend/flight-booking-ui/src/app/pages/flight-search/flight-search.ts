@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 const AVAILABLE_CITIES = ['SRI', 'AMR', 'KRL', 'KOL', 'PUN', 'GOA'];
 
@@ -26,7 +27,11 @@ export class FlightSearchComponent implements OnInit {
   cities = AVAILABLE_CITIES;
 
   isLoading = false;
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient, 
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.setMinDate();
@@ -42,6 +47,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   search() {
+    this.isLoading = true;
     const payload = {
       departingAirport: this.from,
       arrivalAirport: this.to,
@@ -56,6 +62,7 @@ export class FlightSearchComponent implements OnInit {
       next: (response) => {
         this.flights = response.flights;
         this.isLoading = false;
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Database fetch failed', err);
