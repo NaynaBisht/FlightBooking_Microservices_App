@@ -38,12 +38,15 @@
                 />
               </svg>
             </div>
-            <input
+            <select
               class="w-full pl-9 pr-3 py-2.5 rounded-lg border bg-gray-50 focus:bg-white focus:ring-1 focus:ring-offset-0 focus:outline-none transition-all text-sm font-semibold"
               placeholder="Origin"
               [(ngModel)]="from"
               style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
-            />
+            >
+            <option value="" disabled selected> Select Origin </option>
+            <option *ngFor="let city of cities" [value]=""city > {{city}} </option>
+          </select>
           </div>
         </div>
 
@@ -75,12 +78,15 @@
                 />
               </svg>
             </div>
-            <input
+            <select
               class="w-full pl-9 pr-3 py-2.5 rounded-lg border bg-gray-50 focus:bg-white focus:ring-1 focus:ring-offset-0 focus:outline-none transition-all text-sm font-semibold"
               placeholder="Destination"
               [(ngModel)]="to"
               style="border-color: #cea0ae; --tw-ring-color: #cea0ae; color: #402e2a"
-            />
+            >
+            <option value="" disabled selected> Select Destination </option>
+            <option *ngFor="let city of cities" [value]=""city > {{city}} </option>
+            </select>
           </div>
         </div>
 
@@ -88,7 +94,7 @@
           <label
             class="block text-[10px] font-bold uppercase tracking-wider mb-1 ml-1"
             style="color: #684551"
-            >Departure</label
+            >Departure Date</label
           >
           <input
             type="date"

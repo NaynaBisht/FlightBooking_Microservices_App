@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+const AVAILABLE_CITIES = ['SRI', 'AMR', 'KRL', 'KOL', 'PUN', 'GOA'];
+
 @Component({
   selector: 'app-flight-search',
   standalone: true,
@@ -11,18 +13,18 @@ import { Router } from '@angular/router';
   templateUrl: './flight-search.html',
 })
 export class FlightSearchComponent implements OnInit {
-  // form fields
   from = '';
   to = '';
   date = '';
   adults = 1;
   children = 0;
 
-  // New property to store today's date for the 'min' attribute
   minDate = '';
 
-  // results
   flights: any[] = [];
+
+  cities = AVAILABLE_CITIES;
+
   isLoading = false;
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -40,7 +42,6 @@ export class FlightSearchComponent implements OnInit {
   }
 
   search() {
-    // payload EXACTLY like Postman
     const payload = {
       departingAirport: this.from,
       arrivalAirport: this.to,
