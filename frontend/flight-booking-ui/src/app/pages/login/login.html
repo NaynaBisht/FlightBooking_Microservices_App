@@ -49,6 +49,15 @@
             onfocus="this.style.borderColor='#684551'"
             onblur="this.style.borderColor='#CEA0AE'"
           />
+          <div
+            *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+            class="text-xs mt-1 font-semibold"
+            style="color: red"
+          >
+            <span *ngIf="loginForm.get('username')?.errors?.['required']"
+              >Username is required.</span
+            >
+          </div>
         </div>
 
         <div class="mb-8 group">
@@ -67,17 +76,28 @@
             onfocus="this.style.borderColor='#684551'"
             onblur="this.style.borderColor='#CEA0AE'"
           />
+          <div
+            *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+            class="text-xs mt-1 font-semibold"
+            style="color: red"
+          >
+            <span *ngIf="loginForm.get('password')?.errors?.['required']"
+              >Password is required.</span
+            >
+          </div>
         </div>
 
         <button
-          type="submit"
-          class="w-full py-3.5 rounded-xl text-white font-bold text-lg shadow-md hover:shadow-xl transition-all duration-300 transform active:scale-95"
-          style="background-color: #684551"
-          onmouseover="this.style.backgroundColor='#402E2A'"
-          onmouseout="this.style.backgroundColor='#684551'"
-        >
-          Sign In
-        </button>
+  type="submit"
+  [disabled]="loginForm.invalid"
+  class="w-full py-3.5 rounded-xl text-white font-bold text-lg shadow-md transition-all duration-300 transform 
+         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 active:scale-95"
+  [style.backgroundColor]="loginForm.invalid ? '#a89299' : '#684551'"
+  (mouseenter)="!loginForm.invalid ? $any($event.target).style.backgroundColor='#402E2A' : null"
+  (mouseleave)="!loginForm.invalid ? $any($event.target).style.backgroundColor='#684551' : null"
+>
+  Sign In
+</button>
 
         <div class="text-center mt-8 pt-6 border-t border-gray-100">
           <p class="text-sm" style="color: #684551">
