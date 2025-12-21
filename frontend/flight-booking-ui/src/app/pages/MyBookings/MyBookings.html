@@ -1,0 +1,147 @@
+<div class="min-h-screen p-6" style="background-color: #f1eae9">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8" style="color: #402e2a">My Booking History</h1>
+
+    <div *ngIf="isLoading" class="text-center py-10">
+      <div
+        class="animate-spin inline-block w-8 h-8 border-4 border-[#cea0ae] border-t-transparent rounded-full mb-2"
+      ></div>
+      <p style="color: #684551">Loading your bookings...</p>
+    </div>
+
+    <div
+      *ngIf="!isLoading && bookings.length === 0"
+      class="bg-white p-8 rounded-2xl text-center shadow"
+    >
+      <p style="color: #684551">No bookings found for this account.</p>
+    </div>
+
+    <div class="space-y-6">
+      <div
+        *ngFor="let book of bookings"
+        class="bg-white rounded-2xl shadow-md overflow-hidden border-l-8 transition-all"
+        [style.border-color]="book.status === 'CANCELLED' ? '#ef4444' : '#cea0ae'"
+      >
+        <div
+          class="px-6 py-4 border-b border-gray-50 flex justify-between items-center bg-gray-50/50"
+        >
+          <div>
+            <span class="text-[10px] font-bold uppercase text-gray-400 block">PNR Number</span>
+            <span class="font-mono font-bold text-lg" style="color: #402e2a">{{
+              book.pnr || 'N/A'
+            }}</span>
+          </div>
+          <span
+            [ngClass]="
+              book.status === 'CANCELLED'
+                ? 'bg-red-100 text-red-700'
+                : 'bg-green-100 text-green-700'
+            "
+            class="px-3 py-1 rounded-full text-xs font-bold uppercase"
+          >
+            {{ book.status }}
+          </span>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div class="flex items-center gap-4">
+              <div class="text-center">
+                <p class="text-xl font-bold" style="color: #402e2a">{{ book.departingAirport }}</p>
+                <p class="text-[10px] text-gray-500 font-bold">
+                  {{ book.departureTime | date : 'mediumDate' }}
+                </p>
+                <p class="text-xs text-[#684551] font-semibold">
+                  {{ book.departureTime | date : 'shortTime' }}
+                </p>
+              </div>
+
+              <div class="flex-1 border-t-2 border-dotted border-[#cea0ae] relative h-0">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-2">✈️</span>
+              </div>
+
+              <div class="text-center">
+                <p class="text-xl font-bold" style="color: #402e2a">{{ book.arrivalAirport }}</p>
+                <p class="text-[10px] text-gray-500 font-bold uppercase">Destination</p>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <ng-container *ngIf="book.status !== 'CANCELLED'">
+                <button
+                  (click)="openCancelDialog(book.pnr)"
+                  [disabled]="!canCancel(book.departureTime)"
+                  class="px-4 py-2 rounded-lg text-sm font-bold transition-all disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed bg-red-50 text-red-600 hover:bg-red-600 hover:text-white"
+                >
+                  {{ canCancel(book.departureTime) ? 'Cancel Flight' : 'Non-Cancellable' }}
+                </button>
+                <p *ngIf="!canCancel(book.departureTime)" class="text-[9px] text-gray-400 mt-1">
+                  *Cancellations only allowed 24h before departure
+                </p>
+              </ng-container>
+
+              <p *ngIf="book.status === 'CANCELLED'" class="text-xs text-red-500 font-bold italic">
+                Booking Cancelled
+              </p>
+            </div>
+
+            <div class="text-sm border-l border-gray-100 pl-6">
+              <p class="text-gray-500 uppercase text-[10px] font-bold">Contact Details</p>
+              <p class="font-medium">{{ book.emailId }}</p>
+              <p class="text-gray-500">{{ book.contactNumber }}</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-gray-100">
+            <p class="text-gray-500 uppercase text-[10px] font-bold mb-3">
+              Passengers ({{ book.numberOfSeats }} Seats)
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div
+                *ngFor="let passenger of book.passengers"
+                class="flex justify-between bg-gray-50 p-2 rounded-lg text-sm"
+              >
+                <span class="font-medium">
+                  {{ passenger.passengerName }}
+                  <span class="text-gray-400 text-xs">age {{ passenger.age }}</span>
+                </span>
+                <span class="font-mono text-[#684551] font-bold"
+                  >Seat: {{ passenger.seatNum }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cancel Confirmation Dialog -->
+  <div
+    *ngIf="showCancelDialog"
+    class="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
+  >
+    <div class="bg-white rounded-2xl shadow-xl p-6 w-[90%] max-w-sm animate-fade-in">
+      <h2 class="text-lg font-bold mb-2" style="color: #402e2a">Cancel Booking?</h2>
+
+      <p class="text-sm text-gray-600 mb-6">
+        Are you sure you want to cancel this flight? This action cannot be undone.
+      </p>
+
+      <div class="flex justify-end gap-3">
+        <button
+          (click)="closeDialog()"
+          class="px-4 py-2 rounded-lg bg-gray-100 text-gray-600 font-semibold hover:bg-gray-200"
+        >
+          No
+        </button>
+
+        <button
+          (click)="confirmCancel()"
+          class="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700"
+        >
+          Yes, Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
