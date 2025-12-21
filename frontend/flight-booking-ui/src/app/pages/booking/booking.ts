@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './booking.html',
-  styleUrl: './booking.css',
 })
 export class BookingComponent implements OnInit {
   bookingForm!: FormGroup;
@@ -18,29 +17,33 @@ export class BookingComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) {}
 
-ngOnInit(): void {
-  this.flight = history.state?.flight;
-  const adults = history.state?.adults || 1;  
-  const children = history.state?.children || 0;
-  const totalPassengers = adults + children;
+  ngOnInit(): void {
+    this.flight = history.state?.flight;
+    const adults = history.state?.adults || 1;
+    const children = history.state?.children || 0;
+    const totalPassengers = adults + children;
 
-  if (!this.flight) {
-    alert('No flight selected');
-    this.router.navigate(['/flights']);
-    return;
+    const userJson = localStorage.getItem('user');
+    const userData = userJson ? JSON.parse(userJson) : null;
+    const parentEmail = userData?.email || '';
+
+    if (!this.flight) {
+      alert('No flight selected');
+      this.router.navigate(['/flights']);
+      return;
+    }
+
+    this.bookingForm = this.fb.group({
+      emailId: [{ value: parentEmail, disabled: true }, [Validators.required, Validators.email]],
+      contactNumber: ['', Validators.required],
+      numberOfSeats: [totalPassengers, [Validators.required, Validators.min(1)]],
+      passengers: this.fb.array([]),
+    });
+
+    for (let i = 0; i < totalPassengers; i++) {
+      this.addPassenger();
+    }
   }
-
-  this.bookingForm = this.fb.group({
-    emailId: ['', [Validators.required, Validators.email]],
-    contactNumber: ['', Validators.required],
-    numberOfSeats: [totalPassengers, [Validators.required, Validators.min(1)]],
-    passengers: this.fb.array([]),
-  });
-
-  for (let i = 0; i < totalPassengers; i++) {
-    this.addPassenger();
-  }
-}
 
   get passengers(): FormArray {
     return this.bookingForm.get('passengers') as FormArray;
@@ -71,10 +74,9 @@ ngOnInit(): void {
     }
 
     this.isLoading = true;
-
-    // payload EXACTLY like Postman
+    const formValue = this.bookingForm.getRawValue();
     const payload = {
-      emailId: this.bookingForm.value.emailId,
+      emailId: formValue.emailId,
       contactNumber: this.bookingForm.value.contactNumber,
       numberOfSeats: this.bookingForm.value.numberOfSeats,
       passengers: this.bookingForm.value.passengers,
@@ -86,7 +88,7 @@ ngOnInit(): void {
       next: (response) => {
         console.log('Booking successful', response);
         this.isLoading = false;
-        this.router.navigate(['/profile']);
+        this.router.navigate(['/mybookings']);
       },
       error: (err) => {
         console.error('Booking failed', err);
