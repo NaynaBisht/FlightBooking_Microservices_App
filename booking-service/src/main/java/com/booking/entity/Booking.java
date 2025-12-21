@@ -1,5 +1,6 @@
 package com.booking.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import java.util.List;
@@ -23,6 +24,12 @@ public class Booking {
 	private String flightNumber;
 
 	private String pnr;
+
+	private String departingAirport;
+    private String arrivalAirport;
+    private LocalDate departDate;
+    private String departureTime;
+    private String arrivalTime;
 
 	@NotBlank(message = "Email is required")
 	@Email(message = "Invalid email format")

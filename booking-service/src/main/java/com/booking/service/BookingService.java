@@ -68,6 +68,14 @@ public class BookingService {
 									Booking booking = new Booking();
 									booking.setFlightNumber(flightNumber);
 									booking.setPnr(pnrGeneratorService.generatePnr());
+
+									booking.setDepartingAirport(flight.getDepartingAirport());
+									booking.setArrivalAirport(flight.getArrivalAirport());
+									booking.setDepartDate(flight.getDepartDate());
+									booking.setDepartureTime(flight.getDepartureTime());
+									booking.setArrivalTime(flight.getArrivalTime());
+
+
 									booking.setEmailId(request.getEmailId());
 									booking.setContactNumber(request.getContactNumber());
 									booking.setBookingTimestamp(LocalDateTime.now());
@@ -103,9 +111,16 @@ public class BookingService {
 										} catch (Exception e) {
 											log.error("Failed to send RabbitMQ message", e);
 										}
-									}).map(saved -> new BookingResponse(saved.getPnr(), saved.getTotalPrice(),
-											"Booking successful", saved.getEmailId(),
-											saved.getPassengers().get(0).getPassengerName(), flightNumber));
+									}).map(saved -> new BookingResponse(
+										saved.getPnr(), 
+										saved.getTotalPrice(),
+										"Booking successful", 
+										saved.getEmailId(),
+										saved.getPassengers().get(0).getPassengerName(), 
+										saved.getFlightNumber(), 
+										saved.getDepartingAirport(), 
+										saved.getArrivalAirport(),   
+										saved.getDepartureTime()));
 								}));
 	}
 

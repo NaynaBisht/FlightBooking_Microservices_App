@@ -14,4 +14,7 @@ public class BookingResponse {
 	private String emailId;     
     private String passengerName; 
     private String flightNumber;
+	private String departingAirport;
+    private String arrivalAirport;
+    private String departureTime;
 }
