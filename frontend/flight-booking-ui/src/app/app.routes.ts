@@ -4,7 +4,8 @@ import { RegisterComponent } from './pages/register/register';
 import { FlightSearchComponent } from './pages/flight-search/flight-search';
 import { authGuard } from './guards/auth.guard';
 import { BookingComponent } from './pages/booking/booking';
-import { MyBookingsComponent } from './pages/profile/profile';
+import { MyBookingsComponent } from './pages/MyBookings/MyBookings';
+import { AddflightComponent } from './pages/addflight/addflight';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -16,5 +17,7 @@ export const routes: Routes = [
 
   { path: 'booking', component: BookingComponent },
 
-  { path: 'profile', component: MyBookingsComponent }
+  { path: 'mybookings', component: MyBookingsComponent },
+
+  { path: 'addflight', component: AddflightComponent }
 ];

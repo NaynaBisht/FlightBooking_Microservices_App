@@ -27,16 +27,23 @@ export class LoginComponent {
   }
 
   login() {
-    if (this.loginForm.invalid) return;
+  if (this.loginForm.invalid) return;
 
-    this.authService.login(this.loginForm.value).subscribe({
-      next: (res) => {
-        this.authService.saveUser(res);
+  this.authService.login(this.loginForm.value).subscribe({
+    next: (res) => {
+      this.authService.saveUser(res); 
+      
+      const roles = res.roles || []; 
+      
+      if (roles.includes('admin') || roles.includes('ROLE_ADMIN')) {
+        this.router.navigate(['/addflight']);
+      } else {
         this.router.navigate(['/flights']);
-      },
-      error: () => {
-        this.error = 'Invalid username or password';
       }
-    });
-  }
+    },
+    error: () => {
+      this.error = 'Invalid username or password';
+    }
+  });
+}
 }

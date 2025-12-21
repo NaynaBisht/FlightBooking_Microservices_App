@@ -27,6 +27,16 @@ export class AuthService {
     }
   }
 
+  isAdmin(): boolean {
+    const user = this.getUser();
+    const roles: string[] = user.roles || user.role || [];
+    
+    return roles.some(role => 
+      role.toLowerCase() === 'admin' || 
+      role.toLowerCase() === 'role_admin'
+    );
+  }
+
   getToken(): string | null {
     return localStorage.getItem('token');
   }

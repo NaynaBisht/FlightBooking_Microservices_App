@@ -1,67 +1,88 @@
-<nav
-  class="w-full shadow-lg relative z-50"
-  style="background-color:#402E2A;"
->
+<nav class="w-full shadow-lg relative z-50" style="background-color: #402e2a">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
-
-      <a
-        routerLink="/"
-        class="flex items-center gap-3 group focus:outline-none"
-      >
-        <div
-          class="p-2 rounded-full transition-colors duration-300 group-hover:bg-white/10"
-        >
+      <a routerLink="/" class="flex items-center gap-3 group focus:outline-none">
+        <div class="p-2 rounded-full transition-colors duration-300 group-hover:bg-white/10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6 transition-transform duration-300 group-hover:-rotate-45"
-            style="color:#D5B0AC;"
+            style="color: #d5b0ac"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+            />
           </svg>
         </div>
 
-        <span class="text-white text-xl font-bold tracking-wide">
-          Flight Booking App
-        </span>
+        <span class="text-white text-xl font-bold tracking-wide"> Flight Booking App </span>
       </a>
 
       <div class="hidden md:flex items-center gap-4">
+        <a
+          *ngIf="authService.isAdmin()"
+          routerLink="/addflight"
+          class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-white/10"
+        >
+          Add Flight
+        </a>
+
+        <a
+          *ngIf="authService.isLoggedIn()"
+          routerLink="/mybookings"
+          class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-white/10"
+        >
+          My Bookings
+        </a>
 
         <a
           routerLink="/flights"
-          class="px-4 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:bg-white/10"
+          class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-white/10"
         >
           Search Flights
         </a>
 
-        <a
-          routerLink="/login"
-          class="px-4 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:bg-white/10"
-        >
-          Login
-        </a>
+        <ng-container *ngIf="!authService.isLoggedIn()">
+          <a
+            routerLink="/login"
+            class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-white/10"
+          >
+            Login
+          </a>
+          <a
+            routerLink="/register"
+            class="px-5 py-2.5 rounded-lg text-sm font-bold bg-white text-[#402E2A]"
+          >
+            Register
+          </a>
+        </ng-container>
 
-        <a
-          routerLink="/register"
-          class="px-5 py-2.5 rounded-lg text-sm font-bold shadow-md transition-all duration-300 transform hover:-translate-y-0.5 bg-white text-[#402E2A]"
+        <button
+          *ngIf="authService.isLoggedIn()"
+          (click)="authService.logout()"
+          class="px-4 py-2 rounded-lg text-sm font-medium text-red-300 hover:bg-white/10"
         >
-          Register
-        </a>
-
+          Logout
+        </button>
       </div>
 
       <div class="md:hidden flex items-center">
         <button class="text-white hover:text-[#D5B0AC] focus:outline-none">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
-
     </div>
   </div>
 </nav>
