@@ -1,16 +1,20 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
 export const jwtInterceptor: HttpInterceptorFn = (req, next) => {
-  if (req.url.includes('/api/auth')) {
+  const isPublicRoute =
+    req.url.includes('/api/auth/signin') || req.url.includes('/api/auth/signup');
+
+  if (isPublicRoute) {
     return next(req);
   }
+
   const token = localStorage.getItem('token');
 
   if (token) {
     req = req.clone({
       setHeaders: {
-        Authorization: `Bearer ${token}`
-      } 
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
 

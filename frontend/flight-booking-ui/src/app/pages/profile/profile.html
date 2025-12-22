@@ -1,0 +1,150 @@
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-2xl mx-auto">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+      <div
+        class="p-8 text-white flex justify-between items-center"
+        style="background-color: #402e2a"
+      >
+        <div>
+          <h2 class="text-2xl font-bold italic">User Profile</h2>
+          <p class="text-[#d5b0ac] text-sm mt-1">Manage your account and security</p>
+        </div>
+        <div
+          class="h-16 w-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20"
+        >
+          <span class="text-2xl font-bold">{{ user?.username?.charAt(0).toUpperCase() }}</span>
+        </div>
+      </div>
+
+      <div class="p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Username</label>
+            <p class="text-lg font-semibold text-[#402e2a]">{{ user?.username }}</p>
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-400 uppercase tracking-wider"
+              >Email Address</label
+            >
+            <p class="text-lg font-semibold text-[#402e2a]">{{ user?.email }}</p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100 pt-8">
+          <h3 class="text-lg font-bold text-[#402e2a] mb-6 flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+              />
+            </svg>
+            Change Password
+          </h3>
+
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Current Password</label>
+
+              <div class="relative">
+                <input
+                  [type]="showCurrentPassword ? 'text' : 'password'"
+                  formControlName="currentPassword"
+                  class="mt-1 block w-full px-4 py-3 pr-12 rounded-xl border-gray-200 shadow-sm focus:ring-2 focus:ring-[#402e2a]"
+                />
+
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-3 flex items-center text-sm text-gray-500"
+                  (click)="showCurrentPassword = !showCurrentPassword"
+                >
+                  {{ showCurrentPassword ? 'Hide' : 'Show' }}
+                </button>
+              </div>
+
+              <p
+                *ngIf="profileForm.get('currentPassword')?.errors?.['incorrect']"
+                class="mt-2 text-sm text-red-500"
+              >
+                Current password is incorrect.
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">New Password</label>
+
+              <div class="relative">
+                <input
+                  [type]="showNewPassword ? 'text' : 'password'"
+                  formControlName="newPassword"
+                  class="mt-1 block w-full px-4 py-3 pr-12 rounded-xl border-gray-200 shadow-sm focus:ring-2 focus:ring-[#402e2a]"
+                />
+
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-3 flex items-center text-sm text-gray-500"
+                  (click)="showNewPassword = !showNewPassword"
+                >
+                  {{ showNewPassword ? 'Hide' : 'Show' }}
+                </button>
+              </div>
+
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Confirm New Password</label>
+
+              <div class="relative">
+                <input
+                  [type]="showConfirmPassword ? 'text' : 'password'"
+                  formControlName="confirmPassword"
+                  class="mt-1 block w-full px-4 py-3 pr-12 rounded-xl border-gray-200 shadow-sm focus:ring-2 focus:ring-[#402e2a]"
+                />
+
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-3 flex items-center text-sm text-gray-500"
+                  (click)="showConfirmPassword = !showConfirmPassword"
+                >
+                  {{ showConfirmPassword ? 'Hide' : 'Show' }}
+                </button>
+              </div>
+
+              <p
+                *ngIf="
+                  profileForm.hasError('mismatch') && profileForm.get('confirmPassword')?.dirty
+                "
+                class="mt-2 text-sm text-red-500"
+              >
+                Passwords do not match.
+              </p>
+            </div>
+
+            <button
+              type="submit"
+              [disabled]="profileForm.invalid"
+              class="w-full py-4 rounded-xl text-white font-bold shadow-lg transform active:scale-95 transition-all disabled:opacity-50 disabled:scale-100 disabled:cursor-not-allowed mt-4"
+              style="background-color: #402e2a"
+            >
+              Update Password
+            </button>
+            <div
+              *ngIf="statusMsg"
+              class="text-center text-sm font-medium"
+              [ngClass]="isError ? ' text-red-600' : 'text-green-600'"
+            >
+              {{ statusMsg }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

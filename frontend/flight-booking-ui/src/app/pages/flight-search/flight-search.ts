@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 
-const AVAILABLE_CITIES = ['SRI', 'AMR', 'KRL', 'KOL', 'PUN', 'GOA'];
+const AVAILABLE_CITIES = ['SRI', 'AMR', 'KRL', 'KOL', 'PUN', 'GOA', 'CHN', 'RAN', 'BLR', 'DEL', 'GER', 'GUJ', 'MUM', 'TMN' ];
 
 @Component({
   selector: 'app-flight-search',

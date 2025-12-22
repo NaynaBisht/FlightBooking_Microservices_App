@@ -33,6 +33,12 @@ export class LoginComponent {
     next: (res) => {
       this.authService.saveUser(res); 
       
+      if (res.mustChangePassword) {
+          // Redirect to profile with a query param to show a specific message
+          this.router.navigate(['/profile'], { queryParams: { forced: true } });
+          return; // Exit early
+        }
+        
       const roles = res.roles || []; 
       
       if (roles.includes('admin') || roles.includes('ROLE_ADMIN')) {

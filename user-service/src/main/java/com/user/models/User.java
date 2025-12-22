@@ -1,5 +1,6 @@
 package com.user.models;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,6 +44,7 @@ public class User {
 
 	@DBRef
 	private Set<Role> roles = new HashSet<>();
+	private LocalDateTime lastPasswordChangeDate = LocalDateTime.now();
 
 	public User(String username, String email, String password, String firstName, String lastName,
 			String mobileNumber) {
