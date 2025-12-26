@@ -45,6 +45,7 @@ public class User {
 	@DBRef
 	private Set<Role> roles = new HashSet<>();
 	private LocalDateTime lastPasswordChangeDate = LocalDateTime.now();
+	private String otp;
 
 	public User(String username, String email, String password, String firstName, String lastName,
 			String mobileNumber) {

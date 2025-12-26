@@ -1,13 +1,16 @@
 package com.user.controller;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import jakarta.validation.Valid;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -36,6 +39,10 @@ import com.user.security.services.UserDetailsImpl;
 import java.time.temporal.ChronoUnit;
 import org.springframework.http.HttpStatus;
 
+import com.user.payload.request.ForgotPasswordRequest;
+import com.user.payload.request.ResetPasswordRequest;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -51,6 +58,12 @@ public class AuthController {
 
 	@Autowired
 	PasswordEncoder encoder;
+
+	@Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
 	@Autowired
 	JwtUtils jwtUtils;
@@ -90,7 +103,6 @@ public class AuthController {
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-		// 1. Check duplicates
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
 		}
@@ -135,6 +147,39 @@ public class AuthController {
 		userRepository.save(user);
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+	}
+
+	@PostMapping("/forgot-password")
+	public ResponseEntity<?> forgotPassword(@RequestBody ForgotPasswordRequest request) {
+		String otp = String.format("%06d", new Random().nextInt(999999));
+		User user = userRepository.findByEmail(request.email())
+				.orElseThrow(() -> new RuntimeException("User not found"));
+		user.setOtp(otp);
+		userRepository.save(user);
+
+		Map<String, String> message = new HashMap<>();
+		message.put("email", user.getEmail());
+		message.put("otp", otp);
+		rabbitTemplate.convertAndSend("notificationExchange", "otp.email", message);
+
+
+		return ResponseEntity.ok(new MessageResponse("OTP sent to your email"));
+	}
+
+	@PostMapping("/reset-password")
+	public ResponseEntity<?> resetPassword(@RequestBody ResetPasswordRequest request) {
+		User user = userRepository.findByEmail(request.email())
+				.orElseThrow(() -> new RuntimeException("User not found"));
+
+		if (user.getOtp() != null && user.getOtp().equals(request.otp())) {
+			user.setPassword(passwordEncoder.encode(request.newPassword()));
+			user.setOtp(null);
+			user.setLastPasswordChangeDate(LocalDateTime.now());
+			userRepository.save(user);
+			return ResponseEntity.ok(new MessageResponse("Password updated successfully"));
+		}
+
+		return ResponseEntity.badRequest().body(new MessageResponse("Invalid OTP"));
 	}
 
 	@PostMapping("/change-password")
