@@ -75,7 +75,6 @@ public class BookingService {
 									booking.setDepartureTime(flight.getDepartureTime());
 									booking.setArrivalTime(flight.getArrivalTime());
 
-
 									booking.setEmailId(request.getEmailId());
 									booking.setContactNumber(request.getContactNumber());
 									booking.setBookingTimestamp(LocalDateTime.now());
@@ -86,41 +85,51 @@ public class BookingService {
 											.collect(Collectors.toList()));
 									booking.setStatus("BOOKED");
 
-									flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
+									// flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
 
-									return bookingRepository.save(booking).doOnSuccess(savedBooking -> {
-										try {
-											Map<String, Object> emailMessage = new HashMap<>();
-											emailMessage.put("pnr", savedBooking.getPnr());
-											emailMessage.put("emailId", savedBooking.getEmailId());
-											emailMessage.put("flightNumber", savedBooking.getFlightNumber());
-											emailMessage.put("totalPrice", savedBooking.getTotalPrice());
+									return flightClient
+											.reduceSeats(flightNumber, request.getNumberOfSeats())
+											.then(
+													bookingRepository.save(booking)
+															.doOnSuccess(savedBooking -> {
+																try {
+																	Map<String, Object> emailMessage = new HashMap<>();
+																	emailMessage.put("pnr", savedBooking.getPnr());
+																	emailMessage.put("emailId",
+																			savedBooking.getEmailId());
+																	emailMessage.put("flightNumber",
+																			savedBooking.getFlightNumber());
+																	emailMessage.put("totalPrice",
+																			savedBooking.getTotalPrice());
 
-											String name = "Valued Customer";
-											if (savedBooking.getPassengers() != null
-													&& !savedBooking.getPassengers().isEmpty()) {
-												name = savedBooking.getPassengers().get(0).getPassengerName();
-											}
-											emailMessage.put("passengerName", name);
+																	String name = savedBooking.getPassengers()
+																			.get(0)
+																			.getPassengerName();
+																	emailMessage.put("passengerName", name);
 
-											rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE,
-													RabbitMQConfig.ROUTING_KEY, emailMessage);
+																	rabbitTemplate.convertAndSend(
+																			RabbitMQConfig.EXCHANGE,
+																			RabbitMQConfig.ROUTING_KEY,
+																			emailMessage);
 
-											log.info("Message sent to Queue for PNR: {}", savedBooking.getPnr());
+																	log.info(
+																			"Message sent to Queue for PNR: {}",
+																			savedBooking.getPnr());
 
-										} catch (Exception e) {
-											log.error("Failed to send RabbitMQ message", e);
-										}
-									}).map(saved -> new BookingResponse(
-										saved.getPnr(), 
-										saved.getTotalPrice(),
-										"Booking successful", 
-										saved.getEmailId(),
-										saved.getPassengers().get(0).getPassengerName(), 
-										saved.getFlightNumber(), 
-										saved.getDepartingAirport(), 
-										saved.getArrivalAirport(),   
-										saved.getDepartureTime()));
+																} catch (Exception e) {
+																	log.error("Failed to send RabbitMQ message", e);
+																}
+															}))
+											.map(saved -> new BookingResponse(
+													saved.getPnr(),
+													saved.getTotalPrice(),
+													"Booking successful",
+													saved.getEmailId(),
+													saved.getPassengers().get(0).getPassengerName(),
+													saved.getFlightNumber(),
+													saved.getDepartingAirport(),
+													saved.getArrivalAirport(),
+													saved.getDepartureTime()));
 								}));
 	}
 

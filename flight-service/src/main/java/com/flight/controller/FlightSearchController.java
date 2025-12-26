@@ -43,4 +43,17 @@ public class FlightSearchController {
 				.switchIfEmpty(Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).build()));
 	}
 
+	@PutMapping("/{flightNumber}/reduce-seats/{seats}")
+	public Mono<ResponseEntity<Void>> reduceSeats(
+			@PathVariable String flightNumber,
+			@PathVariable int seats) {
+
+		return flightService.reduceSeats(flightNumber, seats)
+				.then(Mono.just(ResponseEntity.ok().<Void>build()))
+				.onErrorResume(ex -> {
+					log.error("Failed to reduce seats for flight {}", flightNumber, ex);
+					return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).<Void>build());
+				});
+	}
+
 }

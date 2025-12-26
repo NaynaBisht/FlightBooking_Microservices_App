@@ -34,7 +34,7 @@ public class BookingController {
 			String msg = ex.getMessage() == null ? "" : ex.getMessage();
 
 			if (msg.contains("not found")) {
-				return Mono.just(ResponseEntity.notFound().build()); // 404
+				return Mono.just(ResponseEntity.notFound().build());
 			}
 
 			return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());

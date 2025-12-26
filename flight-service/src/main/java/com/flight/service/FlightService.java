@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.common.dto.BadRequestException;
 import com.flight.entity.Flight;
@@ -69,5 +71,22 @@ public class FlightService {
 		info.setPrice(flight.getPrice());
 		info.setAvailableSeats(flight.getAvailableSeats());
 		return info;
+	}
+
+	public Mono<Void> reduceSeats(String flightNumber, int seats) {
+		return flightRepository.findByFlightNumber(flightNumber)
+				.switchIfEmpty(Mono.error(new RuntimeException("Flight not found")))
+				.flatMap(flight -> {
+
+					if (flight.getAvailableSeats() < seats) {
+						return Mono.error(new RuntimeException("Insufficient seats"));
+					}
+
+					flight.setAvailableSeats(
+							flight.getAvailableSeats() - seats);
+
+					return flightRepository.save(flight);
+				})
+				.then();
 	}
 }

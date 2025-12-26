@@ -19,4 +19,12 @@ public class FlightClient {
 		return webClient.get().uri("/api/flight/{flightNumber}", flightNumber).retrieve()
 				.onStatus(status -> status.value() == 404, response -> Mono.empty()).bodyToMono(FlightDTO.class);
 	}
+
+	public Mono<Void> reduceSeats(String flightNumber, int seats) {
+		return webClient.put()
+				.uri("/api/flight/{flightNumber}/reduce-seats/{seats}",
+						flightNumber, seats)
+				.retrieve()
+				.bodyToMono(Void.class);
+	}
 }
