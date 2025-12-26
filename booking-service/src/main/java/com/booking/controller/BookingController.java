@@ -11,6 +11,7 @@ import com.booking.entity.Booking;
 import com.booking.request.BookingRequest;
 import com.booking.response.BookingResponse;
 import com.booking.service.BookingService;
+import com.common.dto.ResourceNotFoundException;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -92,19 +93,25 @@ public class BookingController {
 	}
 
 	@DeleteMapping("/booking/cancel/{pnr}")
-	public Mono<ResponseEntity<Void>> cancelBooking(@PathVariable String pnr) {
-		log.warn("Cancel request received for PNR={}", pnr);
+public Mono<ResponseEntity<Object>> cancelBooking(@PathVariable String pnr) {
+    log.warn("Cancel request received for PNR={}", pnr);
 
-		return bookingService.cancelBooking(pnr).then(Mono.just(ResponseEntity.noContent().<Void>build()))
-				.onErrorResume(ex -> {
-					String message = ex.getMessage() == null ? "" : ex.getMessage();
+    return bookingService.cancelBooking(pnr)
+            .then(Mono.just(ResponseEntity.noContent().build()))
+            .onErrorResume(ex -> {
+                log.error("Cancellation error for PNR {}: {}", pnr, ex.getMessage());
 
-					if (message.contains("not found")) {
-						return Mono.just(ResponseEntity.notFound().<Void>build());
-					}
+                if (ex instanceof ResourceNotFoundException) {
+                    return Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND)
+                            .body("Booking not found for PNR: " + pnr));
+                }
 
-					return Mono.just(ResponseEntity.status(HttpStatus.CONFLICT).<Void>build());
-				});
-	}
-
+                if (ex instanceof IllegalStateException) {
+                    return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                            .body(ex.getMessage()));
+                }
+                return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body("An unexpected error occurred. Please contact support."));
+            });
+}
 }

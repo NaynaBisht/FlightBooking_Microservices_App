@@ -22,7 +22,9 @@ import com.common.dto.BadRequestException;
 import com.common.dto.PassengerValidationException;
 import com.common.dto.ResourceNotFoundException;
 import com.common.dto.SeatUnavailableException;
-
+import java.time.Duration;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
@@ -85,7 +87,8 @@ public class BookingService {
 											.collect(Collectors.toList()));
 									booking.setStatus("BOOKED");
 
-									// flight.setAvailableSeats(flight.getAvailableSeats() - request.getNumberOfSeats());
+									// flight.setAvailableSeats(flight.getAvailableSeats() -
+									// request.getNumberOfSeats());
 
 									return flightClient
 											.reduceSeats(flightNumber, request.getNumberOfSeats())
@@ -166,9 +169,28 @@ public class BookingService {
 
 	public Mono<Void> cancelBooking(String pnr) {
 		return bookingRepository.findByPnr(pnr)
-				.switchIfEmpty(Mono.error(new ResourceNotFoundException("Booking not found"))).flatMap(booking -> {
-					booking.setStatus("CANCELLED");
-					return bookingRepository.save(booking);
-				}).then();
+				.switchIfEmpty(Mono.error(new ResourceNotFoundException("Booking not found")))
+				.flatMap(booking -> {
+					try {
+						OffsetDateTime departureDateTime = OffsetDateTime.parse(booking.getDepartureTime());
+
+						// 2. Get the current time in UTC to match your DB timezone
+						OffsetDateTime now = OffsetDateTime.now(ZoneOffset.UTC);
+
+						long hoursDifference = Duration.between(now, departureDateTime).toHours();
+
+						if (hoursDifference < 24) {
+							return Mono.error(new IllegalStateException(
+									"Cancellations are not allowed within 24 hours of departure."));
+						}
+
+						booking.setStatus("CANCELLED");
+						return bookingRepository.save(booking);
+
+					} catch (Exception e) {
+						return Mono.error(new IllegalArgumentException("Error parsing departure time format."));
+					}
+				})
+				.then();
 	}
 }
