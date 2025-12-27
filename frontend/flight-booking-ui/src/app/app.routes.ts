@@ -7,6 +7,7 @@ import { BookingComponent } from './pages/booking/booking';
 import { MyBookingsComponent } from './pages/MyBookings/MyBookings';
 import { AddflightComponent } from './pages/addflight/addflight';
 import { ProfileComponent } from './pages/profile/profile';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,5 +23,7 @@ export const routes: Routes = [
 
   { path: 'addflight', component: AddflightComponent },
 
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+
+  {path: 'forgot-password', component: ForgotPasswordComponent}
 ];

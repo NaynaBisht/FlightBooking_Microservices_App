@@ -16,3 +16,6 @@ start "Booking Service" java -jar booking-service/target/booking-service-0.0.1-S
 
 echo Starting User Service...
 start "User Service" java -jar user-service/target/user-service-0.0.1-SNAPSHOT.jar --spring.profiles.active=local
+
+echo Starting Notification Service...
+start "Notification Service" java -jar notification-service/target/notification-service-0.0.1-SNAPSHOT.jar --spring.profiles.active=local
